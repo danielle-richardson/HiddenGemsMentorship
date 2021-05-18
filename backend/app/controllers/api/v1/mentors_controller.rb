@@ -18,7 +18,7 @@ class Api::V1::MentorsController < ApplicationController
     @mentor = Mentor.new(mentor_params)
 
     if @mentor.save
-      render json: @mentor, status: :created, location: @mentor
+      render json: MentorSerializer.new(@mentor), status: :accepted
     else
       render json: @mentor.errors, status: :unprocessable_entity
     end

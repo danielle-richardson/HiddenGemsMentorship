@@ -711,3 +711,611 @@ Processing by Api::V1::MentorsController#index as HTML
 Completed 200 OK in 220ms (Views: 171.2ms | ActiveRecord: 14.4ms | Allocations: 10087)
 
 
+Started GET "/api/v1/mentors" for ::1 at 2021-05-18 10:44:39 -0500
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::MentorsController#index as */*
+  [1m[36mMentor Load (0.8ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors"[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:8:in `index'
+  [1m[36mDepartment Load (0.7ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:8:in `index'
+Completed 200 OK in 91ms (Views: 77.6ms | ActiveRecord: 3.3ms | Allocations: 14288)
+
+
+Started GET "/api/v1/mentors" for ::1 at 2021-05-18 11:46:59 -0500
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::MentorsController#index as HTML
+  [1m[36mMentor Load (0.7ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors"[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:8:in `index'
+  [1m[36mDepartment Load (0.6ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:8:in `index'
+Completed 200 OK in 75ms (Views: 59.1ms | ActiveRecord: 3.4ms | Allocations: 14285)
+
+
+Started GET "/api/v1/mentors" for ::1 at 2021-05-18 12:02:08 -0500
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::MentorsController#index as */*
+  [1m[36mMentor Load (1.6ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors"[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:8:in `index'
+  [1m[36mDepartment Load (0.7ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:8:in `index'
+Completed 200 OK in 70ms (Views: 50.5ms | ActiveRecord: 4.3ms | Allocations: 14287)
+
+
+Started GET "/api/v1/mentors" for ::1 at 2021-05-18 12:04:37 -0500
+Processing by Api::V1::MentorsController#index as */*
+  [1m[36mMentor Load (0.2ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors"[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:8:in `index'
+  [1m[36mDepartment Load (0.4ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:8:in `index'
+Completed 200 OK in 12ms (Views: 10.7ms | ActiveRecord: 0.6ms | Allocations: 2190)
+
+
+Started GET "/api/v1/mentors" for ::1 at 2021-05-18 12:08:01 -0500
+Processing by Api::V1::MentorsController#index as */*
+  [1m[36mMentor Load (1.0ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors"[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:8:in `index'
+  [1m[36mDepartment Load (0.5ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:8:in `index'
+Completed 200 OK in 75ms (Views: 65.3ms | ActiveRecord: 1.5ms | Allocations: 2190)
+
+
+Started GET "/api/v1/mentors" for ::1 at 2021-05-18 12:22:10 -0500
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::MentorsController#index as */*
+  [1m[36mMentor Load (0.7ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors"[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:8:in `index'
+  [1m[36mDepartment Load (0.6ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:8:in `index'
+Completed 200 OK in 144ms (Views: 137.3ms | ActiveRecord: 1.3ms | Allocations: 2224)
+
+
+Started GET "/api/v1/mentors" for ::1 at 2021-05-18 12:23:14 -0500
+Processing by Api::V1::MentorsController#index as */*
+  [1m[36mMentor Load (0.2ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors"[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:8:in `index'
+  [1m[36mDepartment Load (0.3ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.4ms | Allocations: 2172)
+
+
+Started GET "/api/v1/mentors" for ::1 at 2021-05-18 13:20:32 -0500
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::MentorsController#index as */*
+  [1m[36mMentor Load (1.2ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors"[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:8:in `index'
+  [1m[36mDepartment Load (0.9ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:8:in `index'
+Completed 200 OK in 57ms (Views: 48.7ms | ActiveRecord: 2.0ms | Allocations: 2209)
+
+
+Started GET "/api/v1/mentors" for ::1 at 2021-05-18 13:39:09 -0500
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::MentorsController#index as */*
+  [1m[36mMentor Load (0.8ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors"[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:8:in `index'
+  [1m[36mDepartment Load (0.8ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:8:in `index'
+Completed 200 OK in 61ms (Views: 48.5ms | ActiveRecord: 3.3ms | Allocations: 14287)
+
+
+Started GET "/api/v1/mentors" for ::1 at 2021-05-18 13:49:53 -0500
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::MentorsController#index as */*
+  [1m[36mMentor Load (3.6ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors"[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:8:in `index'
+  [1m[36mDepartment Load (0.6ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:8:in `index'
+Completed 200 OK in 126ms (Views: 116.4ms | ActiveRecord: 4.2ms | Allocations: 2221)
+
+
+Started GET "/api/v1/mentors" for ::1 at 2021-05-18 13:52:48 -0500
+Processing by Api::V1::MentorsController#index as */*
+  [1m[36mMentor Load (0.3ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors"[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:8:in `index'
+  [1m[36mDepartment Load (0.3ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:8:in `index'
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.6ms | Allocations: 2190)
+
+
+Started GET "/api/v1/mentors" for ::1 at 2021-05-18 14:08:15 -0500
+  [1m[35m (3.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::MentorsController#index as */*
+  [1m[36mMentor Load (0.6ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors"[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:8:in `index'
+  [1m[36mDepartment Load (0.6ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:8:in `index'
+Completed 200 OK in 59ms (Views: 45.3ms | ActiveRecord: 5.7ms | Allocations: 14287)
+
+
+Started GET "/api/v1/mentors" for ::1 at 2021-05-18 14:10:04 -0500
+Processing by Api::V1::MentorsController#index as */*
+  [1m[36mMentor Load (0.7ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors"[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:8:in `index'
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:8:in `index'
+Completed 200 OK in 55ms (Views: 49.4ms | ActiveRecord: 0.9ms | Allocations: 2190)
+
+
+Started POST "/api/v1/mentors" for ::1 at 2021-05-18 14:10:23 -0500
+Processing by Api::V1::MentorsController#create as */*
+  Parameters: {"name"=>"Jane", "title"=>"Manager", "about"=>"Im great!", "image_url"=>"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTChmubGgeYm38IwRRVfPtspvx3Up0G960P-k821KWyU-WXsgAL", "department_id"=>"3", "mentor"=>{"name"=>"Jane", "title"=>"Manager", "about"=>"Im great!", "image_url"=>"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTChmubGgeYm38IwRRVfPtspvx3Up0G960P-k821KWyU-WXsgAL", "department_id"=>"3"}}
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:20:in `create'
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:20:in `create'
+  [1m[36mMentor Create (8.6ms)[0m  [1m[32mINSERT INTO "mentors" ("name", "title", "about", "image_url", "department_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Jane"], ["title", "Manager"], ["about", "Im great!"], ["image_url", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTChmubGgeYm38IwRRVfPtspvx3Up0G960P-k821KWyU-WXsgAL"], ["department_id", 3], ["created_at", "2021-05-18 19:10:23.081172"], ["updated_at", "2021-05-18 19:10:23.081172"]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:20:in `create'
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:20:in `create'
+Completed 500 Internal Server Error in 229ms (ActiveRecord: 11.1ms | Allocations: 39454)
+
+
+  
+NoMethodError (undefined method `mentor_url' for #<Api::V1::MentorsController:0x00007fb697739ee8>):
+  
+app/controllers/api/v1/mentors_controller.rb:21:in `create'
+Started GET "/api/v1/mentors" for ::1 at 2021-05-18 14:15:58 -0500
+Processing by Api::V1::MentorsController#index as */*
+  [1m[36mMentor Load (1.1ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors"[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:8:in `index'
+  [1m[36mDepartment Load (0.5ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:8:in `index'
+  [1m[36mCACHE Department Load (0.0ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:8:in `index'
+Completed 200 OK in 117ms (Views: 110.4ms | ActiveRecord: 1.6ms | Allocations: 3450)
+
+
+Started GET "/api/v1/mentors" for ::1 at 2021-05-18 14:16:18 -0500
+Processing by Api::V1::MentorsController#index as */*
+  [1m[36mMentor Load (0.2ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors"[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:8:in `index'
+  [1m[36mDepartment Load (0.3ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:8:in `index'
+  [1m[36mCACHE Department Load (0.0ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:8:in `index'
+Completed 200 OK in 24ms (Views: 23.3ms | ActiveRecord: 0.5ms | Allocations: 3450)
+
+
+Started GET "/api/v1/mentors" for ::1 at 2021-05-18 14:18:02 -0500
+Processing by Api::V1::MentorsController#index as */*
+  [1m[36mMentor Load (1.0ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors"[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:8:in `index'
+  [1m[36mDepartment Load (0.4ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:8:in `index'
+  [1m[36mCACHE Department Load (0.0ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:8:in `index'
+Completed 200 OK in 99ms (Views: 92.3ms | ActiveRecord: 1.4ms | Allocations: 3431)
+
+
+Started POST "/api/v1/mentors" for ::1 at 2021-05-18 14:18:18 -0500
+Processing by Api::V1::MentorsController#create as */*
+  Parameters: {"name"=>"Jane", "title"=>"Manager", "about"=>"I am great!", "image_url"=>"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTChmubGgeYm38IwRRVfPtspvx3Up0G960P-k821KWyU-WXsgAL", "department_id"=>"3", "mentor"=>{"name"=>"Jane", "title"=>"Manager", "about"=>"I am great!", "image_url"=>"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTChmubGgeYm38IwRRVfPtspvx3Up0G960P-k821KWyU-WXsgAL", "department_id"=>"3"}}
+  [1m[35m (0.7ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:20:in `create'
+  [1m[36mDepartment Load (2.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:20:in `create'
+  [1m[36mMentor Create (1.7ms)[0m  [1m[32mINSERT INTO "mentors" ("name", "title", "about", "image_url", "department_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Jane"], ["title", "Manager"], ["about", "I am great!"], ["image_url", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTChmubGgeYm38IwRRVfPtspvx3Up0G960P-k821KWyU-WXsgAL"], ["department_id", 3], ["created_at", "2021-05-18 19:18:18.940068"], ["updated_at", "2021-05-18 19:18:18.940068"]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:20:in `create'
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:20:in `create'
+Completed 500 Internal Server Error in 237ms (ActiveRecord: 6.3ms | Allocations: 39121)
+
+
+  
+NoMethodError (undefined method `mentor_url' for #<Api::V1::MentorsController:0x00007fb69776f548>):
+  
+app/controllers/api/v1/mentors_controller.rb:21:in `create'
+Started GET "/api/v1/mentors" for ::1 at 2021-05-18 14:21:12 -0500
+Processing by Api::V1::MentorsController#index as */*
+  [1m[36mMentor Load (18.5ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors"[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:8:in `index'
+  [1m[36mDepartment Load (0.3ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:8:in `index'
+  [1m[36mCACHE Department Load (0.0ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:8:in `index'
+  [1m[36mCACHE Department Load (0.0ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:8:in `index'
+Completed 200 OK in 265ms (Views: 220.9ms | ActiveRecord: 18.8ms | Allocations: 4690)
+
+
+Started POST "/api/v1/mentors" for ::1 at 2021-05-18 14:21:58 -0500
+Processing by Api::V1::MentorsController#create as */*
+  Parameters: {"name"=>"Danielle Ellis", "title"=>"test", "about"=>"test", "image_url"=>"testpic", "department_id"=>"1", "mentor"=>{"name"=>"Danielle Ellis", "title"=>"test", "about"=>"test", "image_url"=>"testpic", "department_id"=>"1"}}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:20:in `create'
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:20:in `create'
+  [1m[36mMentor Create (1.2ms)[0m  [1m[32mINSERT INTO "mentors" ("name", "title", "about", "image_url", "department_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Danielle Ellis"], ["title", "test"], ["about", "test"], ["image_url", "testpic"], ["department_id", 1], ["created_at", "2021-05-18 19:21:58.874233"], ["updated_at", "2021-05-18 19:21:58.874233"]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:20:in `create'
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:20:in `create'
+Completed 500 Internal Server Error in 243ms (ActiveRecord: 4.7ms | Allocations: 39119)
+
+
+  
+NoMethodError (undefined method `mentor_url' for #<Api::V1::MentorsController:0x00007fb696f92de8>):
+  
+app/controllers/api/v1/mentors_controller.rb:21:in `create'
+Started GET "/api/v1/mentors" for ::1 at 2021-05-18 14:23:52 -0500
+Processing by Api::V1::MentorsController#index as */*
+  [1m[36mMentor Load (1.0ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors"[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:8:in `index'
+  [1m[36mDepartment Load (0.3ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:8:in `index'
+  [1m[36mCACHE Department Load (0.0ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:8:in `index'
+  [1m[36mCACHE Department Load (0.0ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:8:in `index'
+  [1m[36mDepartment Load (1.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:8:in `index'
+Completed 200 OK in 47ms (Views: 40.9ms | ActiveRecord: 2.5ms | Allocations: 6004)
+
+
+Started POST "/api/v1/mentors" for ::1 at 2021-05-18 14:24:29 -0500
+Processing by Api::V1::MentorsController#create as */*
+  Parameters: {"name"=>"adfasf", "title"=>"fdgag", "about"=>"gfzgz", "image_url"=>"", "department_id"=>1, "mentor"=>{"name"=>"adfasf", "title"=>"fdgag", "about"=>"gfzgz", "image_url"=>"", "department_id"=>1}}
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:20:in `create'
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:20:in `create'
+  [1m[36mMentor Create (1.2ms)[0m  [1m[32mINSERT INTO "mentors" ("name", "title", "about", "image_url", "department_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "adfasf"], ["title", "fdgag"], ["about", "gfzgz"], ["image_url", ""], ["department_id", 1], ["created_at", "2021-05-18 19:24:29.148852"], ["updated_at", "2021-05-18 19:24:29.148852"]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:20:in `create'
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:20:in `create'
+Completed 500 Internal Server Error in 200ms (ActiveRecord: 4.3ms | Allocations: 39118)
+
+
+  
+NoMethodError (undefined method `mentor_url' for #<Api::V1::MentorsController:0x00007fb69e944588>):
+  
+app/controllers/api/v1/mentors_controller.rb:21:in `create'
+Started GET "/api/v1/mentors" for ::1 at 2021-05-18 15:39:52 -0500
+  [1m[35m (3.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::MentorsController#index as */*
+  [1m[36mMentor Load (7.3ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors"[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:8:in `index'
+  [1m[36mDepartment Load (0.8ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:8:in `index'
+  [1m[36mCACHE Department Load (0.0ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:8:in `index'
+  [1m[36mCACHE Department Load (0.3ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:8:in `index'
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:8:in `index'
+  [1m[36mCACHE Department Load (0.4ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:8:in `index'
+Completed 200 OK in 215ms (Views: 191.5ms | ActiveRecord: 9.1ms | Allocations: 7304)
+
+
+Started POST "/api/v1/mentors" for ::1 at 2021-05-18 15:40:38 -0500
+Processing by Api::V1::MentorsController#create as */*
+  Parameters: {"name"=>"testagain", "title"=>"testagain", "about"=>"testagain", "image_url"=>"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTChmubGgeYm38IwRRVfPtspvx3Up0G960P-k821KWyU-WXsgAL", "department_id"=>2, "mentor"=>{"name"=>"testagain", "title"=>"testagain", "about"=>"testagain", "image_url"=>"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTChmubGgeYm38IwRRVfPtspvx3Up0G960P-k821KWyU-WXsgAL", "department_id"=>2}}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:20:in `create'
+  [1m[36mDepartment Load (1.4ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:20:in `create'
+  [1m[36mMentor Create (13.2ms)[0m  [1m[32mINSERT INTO "mentors" ("name", "title", "about", "image_url", "department_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "testagain"], ["title", "testagain"], ["about", "testagain"], ["image_url", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTChmubGgeYm38IwRRVfPtspvx3Up0G960P-k821KWyU-WXsgAL"], ["department_id", 2], ["created_at", "2021-05-18 20:40:38.941985"], ["updated_at", "2021-05-18 20:40:38.941985"]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:20:in `create'
+  [1m[35m (7.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:20:in `create'
+Completed 500 Internal Server Error in 257ms (ActiveRecord: 22.2ms | Allocations: 39115)
+
+
+  
+NoMethodError (undefined method `mentor_url' for #<Api::V1::MentorsController:0x00007fb6975ffb18>):
+  
+app/controllers/api/v1/mentors_controller.rb:21:in `create'
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "departments"[0m
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE TABLE "departments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "mentors"[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "mentors" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "title" varchar, "about" varchar, "image_url" varchar, "department_id" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20210517171053)[0m
+  [1m[35m (1.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20210517170438);
+
+[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-05-18 20:41:27.963283"], ["updated_at", "2021-05-18 20:41:27.963283"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "schema_sha1"], ["value", "5db752a3ea15b481378899f5dcc972544194f5e1"], ["created_at", "2021-05-18 20:41:27.987057"], ["updated_at", "2021-05-18 20:41:27.987057"]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "departments"[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE TABLE "departments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "mentors"[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "mentors" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "title" varchar, "about" varchar, "image_url" varchar, "department_id" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (2.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20210517171053)[0m
+  [1m[35m (1.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20210517170438);
+
+[0m
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-05-18 20:41:28.057720"], ["updated_at", "2021-05-18 20:41:28.057720"]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Update (1.0ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = ?, "updated_at" = ? WHERE "ar_internal_metadata"."key" = ?[0m  [["value", "test"], ["updated_at", "2021-05-18 20:41:28.068481"], ["key", "environment"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "schema_sha1"], ["value", "5db752a3ea15b481378899f5dcc972544194f5e1"], ["created_at", "2021-05-18 20:41:28.080476"], ["updated_at", "2021-05-18 20:41:28.080476"]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments"[0m
+  [1m[36mMentor Load (0.2ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDepartment Create (1.1ms)[0m  [1m[32mINSERT INTO "departments" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Technology"], ["created_at", "2021-05-18 20:41:28.147200"], ["updated_at", "2021-05-18 20:41:28.147200"]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDepartment Create (1.2ms)[0m  [1m[32mINSERT INTO "departments" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Administration"], ["created_at", "2021-05-18 20:41:28.162962"], ["updated_at", "2021-05-18 20:41:28.162962"]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDepartment Create (0.9ms)[0m  [1m[32mINSERT INTO "departments" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Operations"], ["created_at", "2021-05-18 20:41:28.175836"], ["updated_at", "2021-05-18 20:41:28.175836"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mMentor Create (1.0ms)[0m  [1m[32mINSERT INTO "mentors" ("name", "title", "about", "image_url", "department_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Olivia Pope"], ["title", "Operations Manager"], ["about", "I have been working at the company 20 years and love spotting rising talent"], ["image_url", "https://i.insider.com/5b9a970d3cccd127008b45cd?width=700"], ["department_id", 3], ["created_at", "2021-05-18 20:41:28.224504"], ["updated_at", "2021-05-18 20:41:28.224504"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/api/v1/mentors" for ::1 at 2021-05-18 15:41:36 -0500
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::MentorsController#index as */*
+  [1m[36mMentor Load (0.7ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors"[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:8:in `index'
+  [1m[36mDepartment Load (0.3ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:8:in `index'
+Completed 200 OK in 65ms (Views: 48.0ms | ActiveRecord: 3.0ms | Allocations: 14287)
+
+
+Started POST "/api/v1/mentors" for ::1 at 2021-05-18 15:41:54 -0500
+Processing by Api::V1::MentorsController#create as */*
+  Parameters: {"name"=>"Jane", "title"=>"Manager", "about"=>"Im great", "image_url"=>"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTChmubGgeYm38IwRRVfPtspvx3Up0G960P-k821KWyU-WXsgAL", "department_id"=>2, "mentor"=>{"name"=>"Jane", "title"=>"Manager", "about"=>"Im great", "image_url"=>"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTChmubGgeYm38IwRRVfPtspvx3Up0G960P-k821KWyU-WXsgAL", "department_id"=>2}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:20:in `create'
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:20:in `create'
+  [1m[36mMentor Create (2.2ms)[0m  [1m[32mINSERT INTO "mentors" ("name", "title", "about", "image_url", "department_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Jane"], ["title", "Manager"], ["about", "Im great"], ["image_url", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTChmubGgeYm38IwRRVfPtspvx3Up0G960P-k821KWyU-WXsgAL"], ["department_id", 2], ["created_at", "2021-05-18 20:41:54.244266"], ["updated_at", "2021-05-18 20:41:54.244266"]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:20:in `create'
+  [1m[35m (8.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:20:in `create'
+Completed 500 Internal Server Error in 165ms (ActiveRecord: 10.5ms | Allocations: 39455)
+
+
+  
+NoMethodError (undefined method `mentor_url' for #<Api::V1::MentorsController:0x00007fa96773e408>):
+  
+app/controllers/api/v1/mentors_controller.rb:21:in `create'
+Started GET "/api/v1/mentors" for ::1 at 2021-05-18 15:49:18 -0500
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::MentorsController#index as */*
+  [1m[36mMentor Load (0.8ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors"[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:8:in `index'
+  [1m[36mDepartment Load (11.8ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:8:in `index'
+  [1m[36mDepartment Load (0.3ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:8:in `index'
+Completed 200 OK in 92ms (Views: 76.4ms | ActiveRecord: 12.8ms | Allocations: 3537)
+
+
+Started POST "/api/v1/mentors" for ::1 at 2021-05-18 15:49:36 -0500
+Processing by Api::V1::MentorsController#create as */*
+  Parameters: {"name"=>"Danielle Ellis", "title"=>"Manager", "about"=>"dwa", "image_url"=>"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTChmubGgeYm38IwRRVfPtspvx3Up0G960P-k821KWyU-WXsgAL", "department_id"=>1, "mentor"=>{"name"=>"Danielle Ellis", "title"=>"Manager", "about"=>"dwa", "image_url"=>"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTChmubGgeYm38IwRRVfPtspvx3Up0G960P-k821KWyU-WXsgAL", "department_id"=>1}}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:20:in `create'
+  [1m[36mDepartment Load (0.3ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:20:in `create'
+  [1m[36mMentor Create (1.8ms)[0m  [1m[32mINSERT INTO "mentors" ("name", "title", "about", "image_url", "department_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Danielle Ellis"], ["title", "Manager"], ["about", "dwa"], ["image_url", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTChmubGgeYm38IwRRVfPtspvx3Up0G960P-k821KWyU-WXsgAL"], ["department_id", 1], ["created_at", "2021-05-18 20:49:36.903055"], ["updated_at", "2021-05-18 20:49:36.903055"]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:20:in `create'
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:20:in `create'
+Completed 500 Internal Server Error in 205ms (ActiveRecord: 3.8ms | Allocations: 39139)
+
+
+  
+NoMethodError (undefined method `mentor_url' for #<Api::V1::MentorsController:0x00007fa966ab58d0>):
+  
+app/controllers/api/v1/mentors_controller.rb:21:in `create'
+Started GET "/api/v1/mentors" for ::1 at 2021-05-18 15:56:22 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::MentorsController#index as HTML
+  [1m[36mMentor Load (1.0ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors"[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:8:in `index'
+  [1m[36mDepartment Load (0.7ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:8:in `index'
+  [1m[36mDepartment Load (0.3ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:8:in `index'
+  [1m[36mDepartment Load (0.3ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:8:in `index'
+Completed 200 OK in 136ms (Views: 116.4ms | ActiveRecord: 2.2ms | Allocations: 4840)
+
+
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "departments"[0m
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE TABLE "departments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "mentors"[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "mentors" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "title" varchar, "about" varchar, "image_url" varchar, "department_id" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (4.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20210517171053)[0m
+  [1m[35m (1.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20210517170438);
+
+[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-05-18 21:13:27.254690"], ["updated_at", "2021-05-18 21:13:27.254690"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "schema_sha1"], ["value", "5db752a3ea15b481378899f5dcc972544194f5e1"], ["created_at", "2021-05-18 21:13:27.276560"], ["updated_at", "2021-05-18 21:13:27.276560"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "departments"[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "departments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "mentors"[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "mentors" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "title" varchar, "about" varchar, "image_url" varchar, "department_id" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20210517171053)[0m
+  [1m[35m (1.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20210517170438);
+
+[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-05-18 21:13:27.337025"], ["updated_at", "2021-05-18 21:13:27.337025"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.5ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = ?, "updated_at" = ? WHERE "ar_internal_metadata"."key" = ?[0m  [["value", "test"], ["updated_at", "2021-05-18 21:13:27.345707"], ["key", "environment"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "schema_sha1"], ["value", "5db752a3ea15b481378899f5dcc972544194f5e1"], ["created_at", "2021-05-18 21:13:27.354699"], ["updated_at", "2021-05-18 21:13:27.354699"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments"[0m
+  [1m[36mMentor Load (0.2ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDepartment Create (0.6ms)[0m  [1m[32mINSERT INTO "departments" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Technology"], ["created_at", "2021-05-18 21:13:27.392136"], ["updated_at", "2021-05-18 21:13:27.392136"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDepartment Create (0.6ms)[0m  [1m[32mINSERT INTO "departments" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Administration"], ["created_at", "2021-05-18 21:13:27.398874"], ["updated_at", "2021-05-18 21:13:27.398874"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDepartment Create (0.6ms)[0m  [1m[32mINSERT INTO "departments" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Operations"], ["created_at", "2021-05-18 21:13:27.405351"], ["updated_at", "2021-05-18 21:13:27.405351"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mMentor Create (0.6ms)[0m  [1m[32mINSERT INTO "mentors" ("name", "title", "about", "image_url", "department_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Olivia Pope"], ["title", "Operations Manager"], ["about", "I have been working at the company 20 years and love spotting rising talent"], ["image_url", "https://i.insider.com/5b9a970d3cccd127008b45cd?width=700"], ["department_id", 3], ["created_at", "2021-05-18 21:13:27.447134"], ["updated_at", "2021-05-18 21:13:27.447134"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/api/v1/mentors" for ::1 at 2021-05-18 16:13:40 -0500
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::MentorsController#index as */*
+  [1m[36mMentor Load (0.4ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors"[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:8:in `index'
+  [1m[36mDepartment Load (0.5ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:8:in `index'
+Completed 200 OK in 70ms (Views: 52.0ms | ActiveRecord: 4.2ms | Allocations: 14287)
+
+
+Started POST "/api/v1/mentors" for ::1 at 2021-05-18 16:13:51 -0500
+Processing by Api::V1::MentorsController#create as */*
+  Parameters: {"name"=>"Jane", "title"=>"Manager", "about"=>"Great", "image_url"=>"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTChmubGgeYm38IwRRVfPtspvx3Up0G960P-k821KWyU-WXsgAL", "department_id"=>1, "mentor"=>{"name"=>"Jane", "title"=>"Manager", "about"=>"Great", "image_url"=>"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTChmubGgeYm38IwRRVfPtspvx3Up0G960P-k821KWyU-WXsgAL", "department_id"=>1}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:20:in `create'
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:20:in `create'
+  [1m[36mMentor Create (1.8ms)[0m  [1m[32mINSERT INTO "mentors" ("name", "title", "about", "image_url", "department_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Jane"], ["title", "Manager"], ["about", "Great"], ["image_url", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTChmubGgeYm38IwRRVfPtspvx3Up0G960P-k821KWyU-WXsgAL"], ["department_id", 1], ["created_at", "2021-05-18 21:13:51.061482"], ["updated_at", "2021-05-18 21:13:51.061482"]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:20:in `create'
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:20:in `create'
+Completed 500 Internal Server Error in 174ms (ActiveRecord: 4.7ms | Allocations: 39454)
+
+
+  
+NoMethodError (undefined method `mentor_url' for #<Api::V1::MentorsController:0x00007f8c68a53f88>):
+  
+app/controllers/api/v1/mentors_controller.rb:21:in `create'
+Started GET "/api/v1/mentors" for ::1 at 2021-05-18 16:21:55 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::MentorsController#index as */*
+  [1m[36mMentor Load (0.6ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors"[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:8:in `index'
+  [1m[36mDepartment Load (0.6ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:8:in `index'
+  [1m[36mDepartment Load (0.4ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:8:in `index'
+Completed 200 OK in 72ms (Views: 62.9ms | ActiveRecord: 1.6ms | Allocations: 12694)
+
+
+Started POST "/api/v1/mentors" for ::1 at 2021-05-18 16:22:13 -0500
+Processing by Api::V1::MentorsController#create as */*
+  Parameters: {"name"=>"Danielle Ellis", "title"=>"Manager", "about"=>"yep", "image_url"=>"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTChmubGgeYm38IwRRVfPtspvx3Up0G960P-k821KWyU-WXsgAL", "department_id"=>3, "mentor"=>{"name"=>"Danielle Ellis", "title"=>"Manager", "about"=>"yep", "image_url"=>"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTChmubGgeYm38IwRRVfPtspvx3Up0G960P-k821KWyU-WXsgAL", "department_id"=>3}}
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:20:in `create'
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:20:in `create'
+  [1m[36mMentor Create (3.3ms)[0m  [1m[32mINSERT INTO "mentors" ("name", "title", "about", "image_url", "department_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Danielle Ellis"], ["title", "Manager"], ["about", "yep"], ["image_url", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTChmubGgeYm38IwRRVfPtspvx3Up0G960P-k821KWyU-WXsgAL"], ["department_id", 3], ["created_at", "2021-05-18 21:22:13.565165"], ["updated_at", "2021-05-18 21:22:13.565165"]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:20:in `create'
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:20:in `create'
+Completed 500 Internal Server Error in 401ms (ActiveRecord: 5.0ms | Allocations: 74253)
+
+
+  
+NameError (undefined local variable or method `mentor' for #<Api::V1::MentorsController:0x00007f8c689bf4a0>
+Did you mean?  @mentor):
+  
+app/controllers/api/v1/mentors_controller.rb:21:in `create'
+Started GET "/api/v1/mentors" for ::1 at 2021-05-18 16:22:52 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::MentorsController#index as */*
+  [1m[36mMentor Load (0.3ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors"[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:8:in `index'
+  [1m[36mDepartment Load (0.7ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:8:in `index'
+  [1m[36mDepartment Load (0.3ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:8:in `index'
+  [1m[36mCACHE Department Load (0.0ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:8:in `index'
+Completed 200 OK in 149ms (Views: 122.5ms | ActiveRecord: 3.8ms | Allocations: 14633)
+
+
+Started POST "/api/v1/mentors" for ::1 at 2021-05-18 16:23:07 -0500
+Processing by Api::V1::MentorsController#create as */*
+  Parameters: {"name"=>"testing", "title"=>"dea", "about"=>"fea", "image_url"=>"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTChmubGgeYm38IwRRVfPtspvx3Up0G960P-k821KWyU-WXsgAL", "department_id"=>1, "mentor"=>{"name"=>"testing", "title"=>"dea", "about"=>"fea", "image_url"=>"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTChmubGgeYm38IwRRVfPtspvx3Up0G960P-k821KWyU-WXsgAL", "department_id"=>1}}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:20:in `create'
+  [1m[36mDepartment Load (1.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:20:in `create'
+  [1m[36mMentor Create (2.8ms)[0m  [1m[32mINSERT INTO "mentors" ("name", "title", "about", "image_url", "department_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "testing"], ["title", "dea"], ["about", "fea"], ["image_url", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTChmubGgeYm38IwRRVfPtspvx3Up0G960P-k821KWyU-WXsgAL"], ["department_id", 1], ["created_at", "2021-05-18 21:23:07.455628"], ["updated_at", "2021-05-18 21:23:07.455628"]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:20:in `create'
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:20:in `create'
+Completed 202 Accepted in 25ms (Views: 1.0ms | ActiveRecord: 6.5ms | Allocations: 4125)
+
+
