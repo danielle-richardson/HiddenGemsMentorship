@@ -30,5 +30,25 @@ function createFormHandler(e) {
     const imageInput = document.querySelector('#input-url').value
     const departmentInput = document.querySelector('#department').value
     const departmentId = parseInt(departmentInput)
-    postMentor(nameInput, titleInput, aboutInput, imageInput, departmentInput)
+    postFetch(nameInput, titleInput, aboutInput, imageInput, departmentId)
 }
+
+//POST FETCH
+function postFetch(name, title, about, image_url, department_id) {
+    // build my body object outside of my fetch
+    const bodyData = {name, title, about, image_url, department_id}
+  
+    fetch(endPoint, {
+      // POST request
+      method: "POST",
+      headers: {"Content-Type": "application/json"},
+      body: JSON.stringify(bodyData)
+    })
+    .then(res => res.json())
+    .then(mentor => {
+      const mentorData = mentor.data
+      // render JSON response
+      let newMentor = new Mentor(mentorData, mentorData.attributes)
+      document.querySelector('#mentor-container').innerHTML += newMentor.renderMentorCard()
+    })
+  }
