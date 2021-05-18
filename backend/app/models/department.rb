@@ -1,3 +1,3 @@
 class Department < ApplicationRecord
-    has_many :mentors
+    has_many :mentors, dependent: :destroy
 end
