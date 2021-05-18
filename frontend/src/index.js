@@ -15,7 +15,7 @@ function getMentors() {
     .then(res => res.json())
     .then(mentors => {
         mentors.data.forEach(mentor => {
-            let newMentor = new mentor(mentor, mentor.attributes)
+            let newMentor = new Mentor(mentor, mentor.attributes)
 
             document.querySelector('#mentor-container').innerHTML += newMentor.renderMentorCard()
         })

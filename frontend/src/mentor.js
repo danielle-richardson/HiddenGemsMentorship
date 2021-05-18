@@ -1,4 +1,4 @@
-class mentor
+class Mentor {
     constructor(mentor, mentorAttributes) {
         this.id = mentor.id
         this.name = mentorAttributes.name
@@ -10,7 +10,7 @@ class mentor
         console.log(this);
     }
 
-    renderMenorCard() {
+    renderMentorCard() {
         return `
       <div class="col-md-4">
         <div class="card mb-4 shadow-sm">
@@ -34,11 +34,11 @@ class mentor
 //        < div data - id=${ mentor.id }>
 //        <img src=${mentor.attributes.image_url} height="200" width="250">
 //        <h3>${mentor.attributes.title}</h3>
-//        <p>${mentor.attributes.department.name}</p>
+//        <p>${mentor.attributes.depsartment.name}</p>
 //        <button data-id=${mentor.id}>edit</button>
 //    </div>
 //    <br></br>`;
     }
 }
 
-Syllabus.all = [];
+Mentor.all = [];
