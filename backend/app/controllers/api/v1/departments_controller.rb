@@ -1,11 +1,11 @@
-class DepartmentsController < ApplicationController
+class Api::V1::DepartmentsController < ApplicationController
   before_action :set_department, only: [:show, :update, :destroy]
 
   # GET /departments
   def index
     @departments = Department.all
 
-    render json: @departments
+    render json: DepartmentSerializer.new(@departments)
   end
 
   # GET /departments/1

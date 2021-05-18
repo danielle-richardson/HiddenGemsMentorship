@@ -1,4 +1,4 @@
-class MentorsController < ApplicationController
+class Api::V1::MentorsController < ApplicationController
   before_action :set_mentor, only: [:show, :update, :destroy]
 
   # GET /mentors
