@@ -3,13 +3,12 @@
 #banner {
     background-image: url("https://images.pexels.com/photos/373893/pexels-photo-373893.jpeg?auto=compress&cs=tinysrgb&h=650&w=940");
     display: grid;
-    height: 100%;
     max-height: 100%;
     max-width: 100%;
     min-height: 100vh; 
     background-size: cover;
     background-repeat: no-repeat;
-
+    transform: scale(1.1); 
 }
 
 
@@ -51,7 +50,8 @@
     border: solid 4px #000000;
     border-color: rgba(0, 0, 0, 0.623);
     font-size: 1.5em;
-
+    display: inline;
+    margin-right: 1em;
 }
 
 #banner .content .button:hover {
@@ -67,12 +67,42 @@
 /* Main */
 
 #about {
-    background: rgb(61, 59, 59);
-    border-top: solid 5px #000000;
-    border-bottom: solid 5px #000000;
-    border-top-width: 10px;
-    border-bottom-width: 10px;
-    padding: 6em 0 6em 0;
+    background: rgb(134, 134, 134);
+    display: grid;
+    max-height: 100%;
+    max-width: 100%;
+    min-height: 100vh; 
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: scale(1.1); 
+    text-align: center;
+    padding: 15em 0 3.5em 0;
+}
+
+#mentor {
+    background: rgb(255, 255, 255);
+    display: grid;
+    max-height: 100%;
+    max-width: 100%;
+    min-height: 100vh; 
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: scale(1.1); 
+    text-align: center;
+    padding: 15em 0 3.5em 0;
+}
+
+#create {
+    background: rgb(255, 255, 255);
+    display: grid;
+    max-height: 100%;
+    max-width: 100%;
+    min-height: 100vh; 
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: scale(1.1); 
+    text-align: center;
+    padding: 15em 0 3.5em 0;
 }
 
 .container {
