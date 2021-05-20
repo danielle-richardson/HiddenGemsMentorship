@@ -14,61 +14,69 @@
 
 <body>
     <!-- BANNER-->
-    <section id="banner"> 
+    <section id="banner">
         <div class="content">
             <div id="transparent">
-            <h2>Welcome to <b>Hidden Gems Mentorship</b></h2>
-            <p>We help rising talent</p>
-            <a href="#about" class="button scrolly">Learn About Us</a> 
-            <a href="#mentor" class="button scrolly">See Our Mentors</a>
-            <a href="#create" class="button scrolly">Become A Mentor</a>
-        </div>
+                <h2>Welcome to <b>Hidden Gems Mentorship</b></h2>
+                <p>We help rising talent</p>
+                <a href="#about" class="button scrolly">Learn About Us</a>
+                <a href="#mentor" class="button scrolly">See Our Mentors</a>
+                <a href="#create" class="button scrolly">Become A Mentor</a>
+            </div>
         </div>
     </section>
 
     <!-- ABOUT SECTION -->
     <section id="about">
         <div class="container">
-                <h2>A random assortment of icons in circles</h2>
-                <p>And some text that attempts to explain their significance</p>
+            <h1>ABOUT</h1>
+            <p>The Hidden Gems mentorship program is designed help you thrive by creating valuable learning experiences and meaningful developmental opportunities. </p>
             <p>
-                Phasellus quam turpis, feugiat sit amet ornare in, hendrerit in lectus. Praesent semper mod quis eget
-                mi. Etiam eu<br>
-                ante risus. Aliquam erat volutpat. Aliquam luctus et mattis lectus amet pulvinar. Nam nec turpis
-                consequat.
+                Goals
+                <b>Career Development</b>: Connect early and mid-career professionals, as well as students, with established industry professionals to further career growth and talent development <br>
+                <b>Skill Enhancement</b>: Build and create a sustainable community of support through collaboration, networking and skill building <br>
+                <b>Recruitment</b>: Attract students to the tech industry by providing insights on the wide array of career opportunities <br>
+                <b>Executive Leadership Development</b>: Promote executive leadership development opportunities that will encourage diversity within the ranks
             </p>
         </div>
     </section>
 
-    <!-- MENTOR-->
+
+    <!-- MENTOR LIST -->
     <section id="mentor">
-    <form id="create-mentor-form" style="">
-        <h3>Create a Mentor</h3>
-
-        <input id='input-name' type="text" name="name" value="" placeholder="Enter your name" class="input-text">
-        <br><br>
-
-        <input id='input-title' type="text" name="title" value="" placeholder="Enter your title" class="input-text">
-        <br><br>
-        <textarea id='input-about' name="about" rows="8" cols="80" value="" placeholder="Describe yourself"></textarea>
-        <br><br>
-        <input id='input-url' type="text" name="image" value="" placeholder="Upload your image" class="input-text">
-        <br><br>
-
-        <select id="department" name="department">
-            <option value="1">Operations</option>
-            <option value="2">Administration</option>
-            <option value="3">Technology</option>
-        </select>
-        <br><br>
-
-        <input id='create-button' type="submit" name="submit" value="Create New Mentor" class="submit">
-    </form>
-
-    </div>
-
-    <div id="mentor-container">
+        <h1>OUR MENTORS</h1>
+        <div id="mentor-container"></div>
     </section>
+
+    <!-- CREATE MENTOR -->
+    <section id="create">
+        <form id="create-mentor-form" style="">
+            <h3>Become a Mentor</h3>
+
+            <input id='input-name' type="text" name="name" value="" placeholder="Enter your name" class="input-text">
+            <br><br>
+
+            <input id='input-title' type="text" name="title" value="" placeholder="Enter your title" class="input-text">
+            <br><br>
+            <textarea id='input-about' name="about" rows="8" cols="80" value=""
+                placeholder="Describe yourself"></textarea>
+            <br><br>
+            <input id='input-url' type="text" name="image" value="" placeholder="Upload your image" class="input-text">
+            <br><br>
+
+            <h4>Choose a Department:</h4><select id="department" name="department">
+                <option value="1">Operations</option>
+                <option value="2">Administration</option>
+                <option value="3">Technology</option>
+            </select>
+            <br><br>
+
+            <input id='create-button' type="submit" name="submit" value="Create New Mentor" class="submit">
+        </form>
+        </div>
+        <section />
+
+
 
 
 </body>
