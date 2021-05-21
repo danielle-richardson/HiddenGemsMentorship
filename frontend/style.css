@@ -35,12 +35,33 @@
     padding: 4em 0 5em 0;
 }
 
+/* MENTORS */
+img:hover {
+  opacity: 0.5;
+}
+
+#mentor {
+  text-align: center;
+}
 
 
+
+
+/* CREATE MENTOR */
+#create {
+  background: rgb(134, 134, 134);
+  display: grid;
+  text-align: center;
+
+}
+
+
+
+/* FOOTER */
   
   footer {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
   
   footer p {
