@@ -1,4 +1,4 @@
-/* Banner */
+/* BANNER */
 
 #banner {
     background-image: url("https://images.pexels.com/photos/373893/pexels-photo-373893.jpeg?auto=compress&cs=tinysrgb&h=650&w=940");
@@ -61,7 +61,7 @@
     border-color: #616763;
 }
 
-/* Main */
+/* ABOUT */
 
 #about {
     background: rgb(134, 134, 134);
@@ -76,6 +76,7 @@
     padding: 15em 0 3.5em 0;
 }
 
+/* MENTORS */
 #mentor {
     background: rgb(255, 255, 255);
     display: grid;
@@ -89,23 +90,10 @@
     padding: 15em 0 3.5em 0;
 }
 
-#create {
-    background: rgb(134, 134, 134);
-    display: grid;
-    max-height: 100%;
-    max-width: 100%;
-    min-height: 100vh;
-    background-size: cover;
-    background-repeat: no-repeat;
-    transform: scale(1.1);
-    text-align: center;
-    padding: 15em 0 3.5em 0;
-}
-
 .container {
     margin: 0 auto;
-    max-width: 100%;
-    width: 64em;
+    max-width: calc(100% - 4em);
+    width: 70em;
 }
 
 img {
@@ -128,6 +116,19 @@ img:hover {
     grid-row-gap: 30px;
     padding: 0 4px;
     grid-gap: 50px;
+}
 
 
+/* CREATE MENTOR */ 
+#create {
+    background: rgb(134, 134, 134);
+    display: grid;
+    max-height: 100%;
+    max-width: 100%;
+    min-height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: scale(1.1);
+    text-align: center;
+    padding: 15em 0 3.5em 0;
 }
