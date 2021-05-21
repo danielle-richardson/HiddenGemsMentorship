@@ -22,13 +22,11 @@ class Mentor {
           <div class="btn-group">
             <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
             <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+            <button type="button" class="btn btn-sm btn-outline-secondary">Delete</button>
           </div>
           <small class="text-muted">Department: ${this.department.name}</small>
         </div>
       </div>
-     </div>
-     </div>
-     </div>
      </div>
     </div> ` 
   }
