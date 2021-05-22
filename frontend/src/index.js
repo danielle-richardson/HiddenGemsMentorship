@@ -4,11 +4,17 @@ document.addEventListener('DOMContentLoaded', () => {
     //fetch and load mentors
     console.log("DOM is Loaded")
     getMentors()
-
-    // event listner and handler for create mentor form
-    const createMentorForm = document.querySelector("#create-mentor-form")
-    createMentorForm.addEventListener("submit", (e) => createFormHandler(e))
+    submitForm();
 })
+
+function submitForm () {
+    const createMentorForm = document.querySelector("#create-mentor-form")
+    createMentorForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        createFormHandler(e);
+        createMentorForm.reset()
+    })
+}
 
 function getMentors() {
     fetch(endPoint)
@@ -30,6 +36,7 @@ function createFormHandler(e) {
     const imageInput = document.querySelector('#input-url').value
     const departmentInput = document.querySelector('#department').value
     const departmentId = parseInt(departmentInput)
+    const mentorId = parseInt(mentorInput)
     postFetch(nameInput, titleInput, aboutInput, imageInput, departmentId)
 }
 
@@ -52,3 +59,4 @@ function postFetch(name, title, about, image_url, department_id) {
       document.querySelector('#mentor-container').innerHTML += newMentor.renderMentorCard()
     })
   }
+  

@@ -30,10 +30,28 @@
     max-width: 40rem;
   }
 
+  body {
+    color: whitesmoke;
+  }
+
 #transparent {
     background-color: rgba(78, 1, 1, 0.4);
     padding: 4em 0 5em 0;
 }
+
+/* ABOUT */
+#about {
+  background-color: black ;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  margin-bottom: 0;
+  max-height: 100%;
+  max-width: 100%;
+  min-height: 100vh;
+}
+
 
 /* MENTORS */
 img:hover {
@@ -41,7 +59,17 @@ img:hover {
 }
 
 #mentor {
+  background-color: rgb(102, 102, 102) ;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  margin-bottom: 0;
+  max-height: 100%;
+  max-width: 100%;
+  min-height: 100vh;
   text-align: center;
+  font-color: black;
 }
 
 
@@ -49,10 +77,16 @@ img:hover {
 
 /* CREATE MENTOR */
 #create {
-  background: rgb(134, 134, 134);
-  display: grid;
+  background-color: rgb(179, 179, 179) ;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  margin-bottom: 0;
+  max-height: 100%;
+  max-width: 100%;
+  min-height: 100vh;
   text-align: center;
-
 }
 
 
