@@ -36,7 +36,6 @@ function createFormHandler(e) {
     const imageInput = document.querySelector('#input-url').value
     const departmentInput = document.querySelector('#department').value
     const departmentId = parseInt(departmentInput)
-    const mentorId = parseInt(mentorInput)
     postFetch(nameInput, titleInput, aboutInput, imageInput, departmentId)
 }
 
