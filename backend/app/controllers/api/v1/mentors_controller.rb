@@ -35,7 +35,10 @@ class Api::V1::MentorsController < ApplicationController
 
   # DELETE /mentors/1
   def destroy
+    mentor = Mentor.find(params[:id])
     @mentor.destroy
+    render json: @mentor
+
   end
 
   private
