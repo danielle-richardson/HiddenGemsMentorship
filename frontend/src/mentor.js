@@ -29,12 +29,9 @@ class Mentor {
         </div>
       </div>
      </div>
-    </div> ` 
+    </div>
+  </div> ` 
   }
-
-
-
 }
-
 
 Mentor.all = [];
