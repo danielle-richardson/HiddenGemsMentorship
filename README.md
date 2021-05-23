@@ -2,7 +2,7 @@
 
 Welcome to the HiddenGemsMentorship App
 
-A simple Single Page Application web application created using HTML, CSS, and JavaScript frontend that communicates with a backend API built with Ruby on Rails. 
+A simple Single Page Application web application created using HTML, CSS, and JavaScript frontend that communicates with a backend API built with Ruby on Rails. This app allows users to sign up to be a mentor in a work environment. 
 
 This project was created as part of the [Flatiron School's Online Web Developer program](https://flatiron-school.com).
 
