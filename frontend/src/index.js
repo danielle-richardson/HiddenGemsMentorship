@@ -2,8 +2,8 @@ const endPoint = "http://localhost:3000/api/v1/mentors"
 
 document.addEventListener('DOMContentLoaded', () => {
     //fetch and load mentors
-    console.log("DOM is Loaded")
-    getMentors()
+    console.log("DOM is Loaded");
+    getMentors();
     submitForm();
 })
 
@@ -15,6 +15,17 @@ function submitForm () {
         createMentorForm.reset()
     })
 }
+
+ function deleteButton () {
+    let mentorID = parseInt(event.target.dataset.id)
+    fetch(`${endPoint}/${mentorID}`, {
+      method: 'DELETE',
+    })
+    const addDelete = document.querySelector("#mentorList");
+    addDelete.remove();
+    alert("Mentor Successfully Deleted!")
+} 
+  
 
 function getMentors() {
     fetch(endPoint)
@@ -57,5 +68,4 @@ function postFetch(name, title, about, image_url, department_id) {
       let newMentor = new Mentor(mentorData, mentorData.attributes)
       document.querySelector('#mentor-container').innerHTML += newMentor.renderMentorCard()
     })
-  }
-  
+}

@@ -13,6 +13,7 @@ class Mentor {
   renderMentorCard() {
     
    return ` 
+   <div id="mentorList"> 
     <div class="col-md-4">
       <div class="card mb-4 shadow-sm">
         <img src=${this.image_url} class="card-img-top" alt="...">
@@ -23,9 +24,7 @@ class Mentor {
         <small class="card-text">${this.about}</small>
           <div class="d-flex justify-content-between align-items-center">
             <div class="btn-group">
-            <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-            <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-            <button type="button" class="btn btn-sm btn-outline-secondary" data-id=${this.id} onclick="deleteUser()">Delete</button>
+            <button type="button" class="btn btn-sm btn-outline-secondary" data-id=${this.id} onclick="deleteButton()">Delete</button>
           </div>
         </div>
       </div>
@@ -33,6 +32,9 @@ class Mentor {
     </div> ` 
   }
 
+
+
 }
+
 
 Mentor.all = [];
