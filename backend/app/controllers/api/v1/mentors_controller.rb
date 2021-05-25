@@ -4,7 +4,6 @@ class Api::V1::MentorsController < ApplicationController
   # GET /mentors
   def index
     @mentors = Mentor.all
-
     render json: MentorSerializer.new(@mentors)
   end
 
