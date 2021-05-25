@@ -13,18 +13,18 @@ class Mentor {
   renderMentorCard() {
     
    return ` 
-   <div id="mentorList"> 
+   <div class="card" id="mentorList" data-id="${this.id}"> 
     <div class="col-md-4">
       <div class="card mb-4 shadow-sm">
-        <img src=${this.image_url} class="card-img-top" alt="...">
+        <img data-id=${this.id} src=${this.image_url} class="card-img-top" alt="...">
         <div class="card-body" style="color: gray;">
-        <h5 class="card-title">${this.name}</h5>  
-        <h6 class="card-title">${this.title}</h6>
-        <h6 class="card-title">${this.department.name} Department</h6>
-        <small class="card-text">${this.about}</small>
+        <h5 data-id=${this.id} class="card-title">${this.name}</h5>  
+        <h6 data-id=${this.id} class="card-title">${this.title}</h6>
+        <h6 data-id=${this.id} class="card-title">${this.department.name} Department</h6>
+        <small data-id=${this.id} class="card-text">${this.about}</small>
           <div class="d-flex justify-content-between align-items-center">
             <div class="btn-group">
-            <button type="button" class="btn btn-sm btn-outline-secondary" data-id=${this.id} onclick="deleteButton()">Delete</button>
+            <button type="button" class="btn btn-sm btn-outline-secondary delete-button" data-id=${this.id} onclick="deleteButton()">Delete</button>
           </div>
         </div>
       </div>
@@ -33,5 +33,7 @@ class Mentor {
   </div> ` 
   }
 }
+
+
 
 Mentor.all = [];

@@ -25,6 +25,13 @@ function getMentors() {
 
             document.querySelector('#mentor-container').innerHTML += newMentor.renderMentorCard()
         })
+        addMentorsClickListeners ()
+    })
+}
+
+function addMentorsClickListeners () {
+    document.querySelectorAll('.delete-button').forEach(element => {
+        element.addEventListener("click", deleteButton) 
     })
 }
 
@@ -60,11 +67,15 @@ function postFetch(name, title, about, image_url, department_id) {
 }
 
 function deleteButton () {
-    let mentorID = parseInt(event.target.dataset.id)
-    fetch(`${endPoint}/${mentorID}`, {
-      method: 'DELETE',
-    })
-    const addDelete = document.querySelector("#mentorList");
-    addDelete.remove();
-    alert("Mentor Successfully Deleted!")
+  let mentorId = parseInt(event.target.dataset.id)
+  // let mentorId = this.parentElement.getAttribute('data-id')
+  fetch(`${endPoint}/${mentorId}`, {
+    method: 'DELETE',
+  })
+  .then(res => res.json())
+  .then(json => {
+      let selectedMentor = document.querySelector(`.card[data-id="${mentorId}"]`);
+      selectedMentor.remove();
+      alert("Mentor Successfully Deleted!")
+  })
 } 
