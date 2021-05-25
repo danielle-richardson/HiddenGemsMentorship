@@ -5,6 +5,20 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log("DOM is Loaded");
     getMentors();
     submitForm();
+
+    // selecting a specific profiles' delete button and attaching click event listener
+    window.addEventListener("click", (e) => {
+        if (e.target.className == "btn btn-sm btn-outline-secondary") {
+            let deleteButton = e.target 
+            let id = deleteButton.dataset.id 
+            let deleteButtonSelect = document.querySelector(`[data-id="${id}" ]`);
+            alert("Are you sure? Click Delete again to confirm.")
+
+            deleteButtonSelect.addEventListener("click", (e) => {
+                deleteMentor();
+            })
+        }
+    })
 })
 
 function submitForm () {
@@ -25,15 +39,9 @@ function getMentors() {
 
             document.querySelector('#mentor-container').innerHTML += newMentor.renderMentorCard()
         })
-        addMentorsClickListeners ()
     })
 }
 
-function addMentorsClickListeners () {
-    document.querySelectorAll('.delete-button').forEach(element => {
-        element.addEventListener("click", deleteButton) 
-    })
-}
 
 function createFormHandler(e) {
     e.preventDefault()
@@ -66,14 +74,16 @@ function postFetch(name, title, about, image_url, department_id) {
     })
 }
 
-function deleteButton () {
-  let mentorId = parseInt(event.target.dataset.id)
+
+
+function deleteMentor () {
+  let mentorId = event.target.dataset.id;
   // let mentorId = this.parentElement.getAttribute('data-id')
   fetch(`${endPoint}/${mentorId}`, {
     method: 'DELETE',
   })
   .then(res => res.json())
-  .then(json => {
+  .then((json) => {
       let selectedMentor = document.querySelector(`.card[data-id="${mentorId}"]`);
       selectedMentor.remove();
       alert("Mentor Successfully Deleted!")
