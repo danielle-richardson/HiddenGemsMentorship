@@ -34,10 +34,16 @@ function getMentors() {
     fetch(endPoint)
     .then(res => res.json())
     .then(mentors => {
+        mentors.data.sort(function(a,b) {
+            if (a.attributes.name < b.attributes.name) {return -1;}
+            if (a.attributes.name > b.attributes.name) {return 1;}
+            return 0;
+        })
         mentors.data.forEach(mentor => {
             let newMentor = new Mentor(mentor, mentor.attributes)
 
             document.querySelector('#mentor-container').innerHTML += newMentor.renderMentorCard()
+
         })
     })
 }
