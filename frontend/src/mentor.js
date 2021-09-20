@@ -13,8 +13,9 @@ class Mentor {
   renderMentorCard() {
     
    return ` 
-   <div class="card" data-id="${this.id}"> 
-    <div class="col-md-4">
+   <div class="container" data-id="${this.id}"> 
+    <div class="row justify-content-center">
+    <div class="col-sm-8">
       <div class="card mb-4 shadow-sm">
         <img src="${this.image_url}" class="card-img-top" alt="...">
         <div class="card-body" style="color: gray;">
@@ -27,6 +28,7 @@ class Mentor {
             <button type="button" class="btn btn-sm btn-outline-secondary" data-id="${this.id}">Delete</button>
           </div>
         </div>
+      </div>
       </div>
      </div>
     </div>

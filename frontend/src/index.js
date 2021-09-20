@@ -90,7 +90,7 @@ function deleteMentor () {
   })
   .then(res => res.json())
   .then((json) => {
-      let selectedMentor = document.querySelector(`.card[data-id="${mentorId}"]`);
+      let selectedMentor = document.querySelector(`.container[data-id="${mentorId}"]`);
       selectedMentor.remove();
       alert("Mentor Successfully Deleted!")
   })
