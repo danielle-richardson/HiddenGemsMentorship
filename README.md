@@ -13,6 +13,8 @@ Installation
 
 3. Locally run a server using the rails command "rails server" which will create a localhost:3000 port. Open this port in your preferred internet browser
 
+4. Open frontend using the command "open index.html" 
+
 
 # Development
 After checking out the repo, run bundle install to install dependencies. For advance users, You can also run rails -s in your terminal to locally experiment with objects and your migrations in the database using rails sandbox.

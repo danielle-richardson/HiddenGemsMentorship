@@ -14096,3 +14096,1808 @@ Processing by Api::V1::MentorsController#index as */*
 Completed 200 OK in 103ms (Views: 95.0ms | ActiveRecord: 4.0ms | Allocations: 6208)
 
 
+Started GET "/api/v1/mentors" for ::1 at 2021-06-08 15:33:35 -0500
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::MentorsController#index as */*
+  [1m[36mMentor Load (0.1ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors"[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.0ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.0ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+Completed 200 OK in 38ms (Views: 34.0ms | ActiveRecord: 0.9ms | Allocations: 21212)
+
+
+Started GET "/api/v1/mentors" for ::1 at 2021-06-10 14:36:05 -0500
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::MentorsController#index as */*
+  [1m[36mMentor Load (0.2ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors"[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.0ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.0ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.0ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+Completed 200 OK in 17ms (Views: 14.2ms | ActiveRecord: 0.9ms | Allocations: 18331)
+
+
+Started POST "/api/v1/mentors" for ::1 at 2021-06-10 14:37:55 -0500
+Processing by Api::V1::MentorsController#create as */*
+  Parameters: {"name"=>"Will Smith", "title"=>"Manager", "about"=>"I am great! ", "image_url"=>"https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQbuF86tSHODHWHJRusio04zBWZHRNgFJdu-jyiWgkIbBC4-tuT", "department_id"=>2, "mentor"=>{"name"=>"Will Smith", "title"=>"Manager", "about"=>"I am great! ", "image_url"=>"https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQbuF86tSHODHWHJRusio04zBWZHRNgFJdu-jyiWgkIbBC4-tuT", "department_id"=>2}}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:19:in `create'
+  [1m[36mDepartment Load (0.6ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:19:in `create'
+  [1m[36mMentor Create (2.3ms)[0m  [1m[32mINSERT INTO "mentors" ("name", "title", "about", "image_url", "department_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Will Smith"], ["title", "Manager"], ["about", "I am great! "], ["image_url", "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQbuF86tSHODHWHJRusio04zBWZHRNgFJdu-jyiWgkIbBC4-tuT"], ["department_id", 2], ["created_at", "2021-06-10 19:37:55.329572"], ["updated_at", "2021-06-10 19:37:55.329572"]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:19:in `create'
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:19:in `create'
+Completed 202 Accepted in 21ms (Views: 1.4ms | ActiveRecord: 4.5ms | Allocations: 4320)
+
+
+Started DELETE "/api/v1/mentors/7" for ::1 at 2021-06-10 14:38:15 -0500
+Processing by Api::V1::MentorsController#destroy as */*
+  Parameters: {"id"=>"7"}
+  [1m[36mMentor Load (0.5ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors" WHERE "mentors"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:46:in `set_mentor'
+  [1m[36mCACHE Mentor Load (0.0ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors" WHERE "mentors"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:37:in `destroy'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:38:in `destroy'
+  [1m[36mMentor Destroy (1.8ms)[0m  [1m[31mDELETE FROM "mentors" WHERE "mentors"."id" = ?[0m  [["id", 7]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:38:in `destroy'
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:38:in `destroy'
+  [1m[36mMentor Load (0.2ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors" WHERE "mentors"."department_id" = ?[0m  [["department_id", 2]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:38:in `destroy'
+  [1m[36mMentor Destroy (0.1ms)[0m  [1m[31mDELETE FROM "mentors" WHERE "mentors"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:38:in `destroy'
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:38:in `destroy'
+Completed 200 OK in 47ms (Views: 0.5ms | ActiveRecord: 3.3ms | Allocations: 10235)
+
+
+Started GET "/api/v1/mentors" for ::1 at 2021-06-10 15:05:03 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::MentorsController#index as */*
+  [1m[36mMentor Load (0.2ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors"[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mCACHE Department Load (0.0ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+Completed 200 OK in 14ms (Views: 11.7ms | ActiveRecord: 0.7ms | Allocations: 7480)
+
+
+Started GET "/api/v1/mentors" for ::1 at 2021-06-10 15:05:29 -0500
+Processing by Api::V1::MentorsController#index as */*
+  [1m[36mMentor Load (0.2ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors"[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.4ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.3ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.3ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mCACHE Department Load (0.0ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+Completed 200 OK in 21ms (Views: 19.3ms | ActiveRecord: 1.4ms | Allocations: 7449)
+
+
+Started GET "/api/v1/mentors" for ::1 at 2021-06-10 15:08:13 -0500
+Processing by Api::V1::MentorsController#index as */*
+  [1m[36mMentor Load (0.4ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors"[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.3ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.3ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.3ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.5ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mCACHE Department Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+Completed 200 OK in 24ms (Views: 21.7ms | ActiveRecord: 1.7ms | Allocations: 7430)
+
+
+Started GET "/api/v1/mentors" for ::1 at 2021-06-10 15:14:33 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::MentorsController#index as */*
+  [1m[36mMentor Load (0.5ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors"[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.6ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.3ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.4ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mCACHE Department Load (0.0ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+Completed 200 OK in 43ms (Views: 39.7ms | ActiveRecord: 2.0ms | Allocations: 7471)
+
+
+Started GET "/" for ::1 at 2021-06-10 15:16:00 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/danielleellis/.rvm/gems/ruby-2.6.1/gems/railties-6.0.3.7/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/danielleellis/.rvm/gems/ruby-2.6.1/gems/railties-6.0.3.7/lib/rails/templates/rails/welcome/index.html.erb (Duration: 7.5ms | Allocations: 480)
+Completed 200 OK in 27ms (Views: 19.9ms | ActiveRecord: 0.0ms | Allocations: 2626)
+
+
+Started GET "/favicon.ico" for ::1 at 2021-06-10 15:16:00 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (6.0.3.7) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.7) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.7) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.7) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.7) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.7) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.7) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.7) lib/rails/engine.rb:527:in `call'
+puma (4.3.8) lib/puma/configuration.rb:228:in `call'
+puma (4.3.8) lib/puma/server.rb:718:in `handle_request'
+puma (4.3.8) lib/puma/server.rb:472:in `process_client'
+puma (4.3.8) lib/puma/server.rb:328:in `block in run'
+puma (4.3.8) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/v1/mentors" for ::1 at 2021-06-10 15:16:25 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/v1/mentors"):
+  
+actionpack (6.0.3.7) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.7) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.7) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.7) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.7) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.7) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.7) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.7) lib/rails/engine.rb:527:in `call'
+puma (4.3.8) lib/puma/configuration.rb:228:in `call'
+puma (4.3.8) lib/puma/server.rb:718:in `handle_request'
+puma (4.3.8) lib/puma/server.rb:472:in `process_client'
+puma (4.3.8) lib/puma/server.rb:328:in `block in run'
+puma (4.3.8) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/api/v1/mentors" for ::1 at 2021-06-10 15:16:39 -0500
+Processing by Api::V1::MentorsController#index as HTML
+  [1m[36mMentor Load (0.5ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors"[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.3ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.3ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (2.6ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mCACHE Department Load (0.0ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+Completed 200 OK in 28ms (Views: 23.5ms | ActiveRecord: 3.9ms | Allocations: 7484)
+
+
+Started GET "/api/v1/mentors" for ::1 at 2021-06-10 15:17:39 -0500
+Processing by Api::V1::MentorsController#index as */*
+  [1m[36mMentor Load (0.4ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors"[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.4ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.3ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.3ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mCACHE Department Load (0.0ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+Completed 200 OK in 39ms (Views: 37.4ms | ActiveRecord: 1.6ms | Allocations: 7433)
+
+
+Started GET "/api/v1/mentors" for ::1 at 2021-06-10 15:18:53 -0500
+Processing by Api::V1::MentorsController#index as */*
+  [1m[36mMentor Load (0.5ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors"[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.3ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.3ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.3ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mCACHE Department Load (0.0ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+Completed 200 OK in 21ms (Views: 18.4ms | ActiveRecord: 1.6ms | Allocations: 7430)
+
+
+Started GET "/api/v1/mentors" for ::1 at 2021-06-10 15:24:29 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::MentorsController#index as */*
+  [1m[36mMentor Load (0.4ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors"[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.4ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.3ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mCACHE Department Load (0.0ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+Completed 200 OK in 27ms (Views: 24.5ms | ActiveRecord: 1.3ms | Allocations: 7467)
+
+
+Started GET "/api/v1/mentors" for ::1 at 2021-09-10 09:43:33 -0500
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::MentorsController#index as */*
+  [1m[36mMentor Load (0.1ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors"[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.0ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.0ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mCACHE Department Load (0.0ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+Completed 200 OK in 48ms (Views: 42.4ms | ActiveRecord: 1.0ms | Allocations: 22470)
+
+
+Started GET "/api/v1/mentors" for ::1 at 2021-09-20 12:19:43 -0500
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::MentorsController#index as */*
+  [1m[36mMentor Load (0.2ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors"[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mCACHE Department Load (0.0ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+Completed 200 OK in 45ms (Views: 40.5ms | ActiveRecord: 1.6ms | Allocations: 19589)
+
+
+Started GET "/api/v1/mentors" for ::1 at 2021-09-20 12:22:35 -0500
+Processing by Api::V1::MentorsController#index as */*
+  [1m[36mMentor Load (0.7ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors"[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mCACHE Department Load (0.0ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+Completed 200 OK in 29ms (Views: 26.8ms | ActiveRecord: 1.3ms | Allocations: 7449)
+
+
+Started GET "/api/v1/mentors" for ::1 at 2021-09-20 12:23:12 -0500
+Processing by Api::V1::MentorsController#index as */*
+  [1m[36mMentor Load (0.5ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors"[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.3ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mCACHE Department Load (0.0ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+Completed 200 OK in 45ms (Views: 42.1ms | ActiveRecord: 1.2ms | Allocations: 7452)
+
+
+Started GET "/api/v1/mentors" for ::1 at 2021-09-20 12:31:54 -0500
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::MentorsController#index as */*
+  [1m[36mMentor Load (0.6ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors"[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.3ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.0ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mCACHE Department Load (0.0ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+Completed 200 OK in 29ms (Views: 26.8ms | ActiveRecord: 1.2ms | Allocations: 7480)
+
+
+Started GET "/api/v1/mentors" for ::1 at 2021-09-20 12:32:04 -0500
+Processing by Api::V1::MentorsController#index as */*
+  [1m[36mMentor Load (0.5ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors"[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.3ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.3ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.7ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mCACHE Department Load (0.0ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+Completed 200 OK in 31ms (Views: 27.9ms | ActiveRecord: 1.9ms | Allocations: 7449)
+
+
+Started GET "/api/v1/mentors" for ::1 at 2021-09-20 12:32:26 -0500
+Processing by Api::V1::MentorsController#index as */*
+  [1m[36mMentor Load (0.6ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors"[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (1.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mCACHE Department Load (0.0ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+Completed 200 OK in 45ms (Views: 40.6ms | ActiveRecord: 2.4ms | Allocations: 7430)
+
+
+Started GET "/api/v1/mentors" for ::1 at 2021-09-20 12:32:38 -0500
+Processing by Api::V1::MentorsController#index as */*
+  [1m[36mMentor Load (0.4ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors"[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mCACHE Department Load (0.0ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+Completed 200 OK in 33ms (Views: 31.0ms | ActiveRecord: 0.9ms | Allocations: 7430)
+
+
+Started GET "/api/v1/mentors" for ::1 at 2021-09-20 12:33:23 -0500
+Processing by Api::V1::MentorsController#index as */*
+  [1m[36mMentor Load (0.7ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors"[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mCACHE Department Load (0.0ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+Completed 200 OK in 51ms (Views: 43.7ms | ActiveRecord: 1.2ms | Allocations: 7430)
+
+
+Started GET "/api/v1/mentors" for ::1 at 2021-09-20 13:45:41 -0500
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::MentorsController#index as */*
+  [1m[36mMentor Load (0.3ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors"[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.3ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mCACHE Department Load (0.0ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+Completed 200 OK in 21ms (Views: 18.1ms | ActiveRecord: 1.0ms | Allocations: 7468)
+
+
+Started GET "/api/v1/mentors" for ::1 at 2021-09-20 13:46:10 -0500
+Processing by Api::V1::MentorsController#index as */*
+  [1m[36mMentor Load (0.7ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors"[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.3ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mCACHE Department Load (0.0ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+Completed 200 OK in 40ms (Views: 32.9ms | ActiveRecord: 1.3ms | Allocations: 7430)
+
+
+Started GET "/api/v1/mentors" for ::1 at 2021-09-20 13:46:24 -0500
+Processing by Api::V1::MentorsController#index as */*
+  [1m[36mMentor Load (0.6ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors"[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.3ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mCACHE Department Load (0.0ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+Completed 200 OK in 33ms (Views: 30.1ms | ActiveRecord: 1.5ms | Allocations: 7430)
+
+
+Started GET "/api/v1/mentors" for ::1 at 2021-09-20 13:49:26 -0500
+Processing by Api::V1::MentorsController#index as */*
+  [1m[36mMentor Load (0.5ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors"[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.4ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mCACHE Department Load (0.0ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+Completed 200 OK in 19ms (Views: 16.1ms | ActiveRecord: 1.3ms | Allocations: 7430)
+
+
+Started GET "/api/v1/mentors" for ::1 at 2021-09-20 13:59:49 -0500
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::MentorsController#index as */*
+  [1m[36mMentor Load (1.8ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors"[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mCACHE Department Load (0.0ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+Completed 200 OK in 24ms (Views: 17.4ms | ActiveRecord: 2.4ms | Allocations: 7467)
+
+
+Started GET "/api/v1/mentors" for ::1 at 2021-09-20 14:00:56 -0500
+Processing by Api::V1::MentorsController#index as */*
+  [1m[36mMentor Load (0.5ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors"[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.3ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.9ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.3ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mCACHE Department Load (0.0ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+Completed 200 OK in 38ms (Views: 34.5ms | ActiveRecord: 2.2ms | Allocations: 7430)
+
+
+Started GET "/api/v1/mentors" for ::1 at 2021-09-20 14:02:29 -0500
+Processing by Api::V1::MentorsController#index as */*
+  [1m[36mMentor Load (0.4ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors"[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mCACHE Department Load (0.0ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+Completed 200 OK in 67ms (Views: 63.9ms | ActiveRecord: 0.9ms | Allocations: 7433)
+
+
+Started GET "/api/v1/mentors" for ::1 at 2021-09-20 14:07:59 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::MentorsController#index as */*
+  [1m[36mMentor Load (0.4ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors"[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (1.4ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mCACHE Department Load (0.0ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+Completed 200 OK in 20ms (Views: 16.0ms | ActiveRecord: 2.2ms | Allocations: 7467)
+
+
+Started GET "/api/v1/mentors" for ::1 at 2021-09-20 14:08:53 -0500
+Processing by Api::V1::MentorsController#index as */*
+  [1m[36mMentor Load (0.8ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors"[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.3ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mCACHE Department Load (0.0ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+Completed 200 OK in 34ms (Views: 31.1ms | ActiveRecord: 1.4ms | Allocations: 7430)
+
+
+Started GET "/api/v1/mentors" for ::1 at 2021-09-20 14:10:07 -0500
+Processing by Api::V1::MentorsController#index as */*
+  [1m[36mMentor Load (0.4ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors"[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.8ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mCACHE Department Load (0.0ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+Completed 200 OK in 34ms (Views: 29.9ms | ActiveRecord: 1.8ms | Allocations: 7430)
+
+
+Started GET "/api/v1/mentors" for ::1 at 2021-09-20 14:11:29 -0500
+Processing by Api::V1::MentorsController#index as */*
+  [1m[36mMentor Load (0.6ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors"[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.3ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.3ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mCACHE Department Load (0.0ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+Completed 200 OK in 29ms (Views: 23.8ms | ActiveRecord: 1.6ms | Allocations: 7430)
+
+
+Started GET "/api/v1/mentors" for ::1 at 2021-09-20 14:11:37 -0500
+Processing by Api::V1::MentorsController#index as */*
+  [1m[36mMentor Load (0.3ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors"[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.3ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.4ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.3ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mCACHE Department Load (0.0ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+Completed 200 OK in 25ms (Views: 23.5ms | ActiveRecord: 1.5ms | Allocations: 7430)
+
+
+Started GET "/api/v1/mentors" for ::1 at 2021-09-20 14:11:43 -0500
+Processing by Api::V1::MentorsController#index as */*
+  [1m[36mMentor Load (0.3ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors"[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.3ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.3ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mCACHE Department Load (0.0ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+Completed 200 OK in 34ms (Views: 31.8ms | ActiveRecord: 1.4ms | Allocations: 7433)
+
+
+Started GET "/api/v1/mentors" for ::1 at 2021-09-20 14:12:06 -0500
+Processing by Api::V1::MentorsController#index as */*
+  [1m[36mMentor Load (0.5ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors"[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.3ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mCACHE Department Load (0.0ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+Completed 200 OK in 22ms (Views: 20.0ms | ActiveRecord: 1.2ms | Allocations: 7430)
+
+
+Started GET "/api/v1/mentors" for ::1 at 2021-09-20 14:12:42 -0500
+Processing by Api::V1::MentorsController#index as */*
+  [1m[36mMentor Load (0.4ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors"[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mCACHE Department Load (0.0ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+Completed 200 OK in 28ms (Views: 23.0ms | ActiveRecord: 1.2ms | Allocations: 7430)
+
+
+Started GET "/api/v1/mentors" for ::1 at 2021-09-20 14:13:24 -0500
+Processing by Api::V1::MentorsController#index as */*
+  [1m[36mMentor Load (0.6ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors"[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.7ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mCACHE Department Load (0.0ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+Completed 200 OK in 31ms (Views: 26.0ms | ActiveRecord: 1.8ms | Allocations: 7430)
+
+
+Started GET "/api/v1/mentors" for ::1 at 2021-09-20 14:13:35 -0500
+Processing by Api::V1::MentorsController#index as */*
+  [1m[36mMentor Load (0.3ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors"[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.3ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.5ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mCACHE Department Load (0.0ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+Completed 200 OK in 20ms (Views: 17.9ms | ActiveRecord: 1.3ms | Allocations: 7430)
+
+
+Started GET "/api/v1/mentors" for ::1 at 2021-09-20 14:14:43 -0500
+Processing by Api::V1::MentorsController#index as */*
+  [1m[36mMentor Load (0.3ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors"[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mCACHE Department Load (0.0ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+Completed 200 OK in 12ms (Views: 10.5ms | ActiveRecord: 0.8ms | Allocations: 7430)
+
+
+Started GET "/api/v1/mentors" for ::1 at 2021-09-20 14:15:04 -0500
+Processing by Api::V1::MentorsController#index as */*
+  [1m[36mMentor Load (0.3ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors"[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.3ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.4ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.3ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mCACHE Department Load (0.0ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+Completed 200 OK in 33ms (Views: 30.6ms | ActiveRecord: 1.5ms | Allocations: 7430)
+
+
+Started GET "/api/v1/mentors" for ::1 at 2021-09-20 14:15:46 -0500
+Processing by Api::V1::MentorsController#index as */*
+  [1m[36mMentor Load (1.1ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors"[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mCACHE Department Load (0.0ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+Completed 200 OK in 43ms (Views: 37.0ms | ActiveRecord: 1.6ms | Allocations: 7433)
+
+
+Started GET "/api/v1/mentors" for ::1 at 2021-09-20 14:16:02 -0500
+Processing by Api::V1::MentorsController#index as */*
+  [1m[36mMentor Load (0.6ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors"[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.3ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mCACHE Department Load (0.0ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+Completed 200 OK in 26ms (Views: 18.6ms | ActiveRecord: 1.5ms | Allocations: 7430)
+
+
+Started GET "/api/v1/mentors" for ::1 at 2021-09-20 14:16:10 -0500
+Processing by Api::V1::MentorsController#index as */*
+  [1m[36mMentor Load (0.4ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors"[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.3ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.3ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.4ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mCACHE Department Load (0.0ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+Completed 200 OK in 21ms (Views: 18.9ms | ActiveRecord: 1.6ms | Allocations: 7430)
+
+
+Started GET "/api/v1/mentors" for ::1 at 2021-09-20 14:17:22 -0500
+Processing by Api::V1::MentorsController#index as */*
+  [1m[36mMentor Load (3.7ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors"[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.3ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mCACHE Department Load (0.0ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+Completed 200 OK in 32ms (Views: 26.2ms | ActiveRecord: 4.5ms | Allocations: 7430)
+
+
+Started GET "/api/v1/mentors" for ::1 at 2021-09-20 14:19:41 -0500
+Processing by Api::V1::MentorsController#index as */*
+  [1m[36mMentor Load (1.8ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors"[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.3ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mCACHE Department Load (0.0ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+Completed 200 OK in 26ms (Views: 22.5ms | ActiveRecord: 2.7ms | Allocations: 7430)
+
+
+Started GET "/api/v1/mentors" for ::1 at 2021-09-20 14:19:49 -0500
+Processing by Api::V1::MentorsController#index as */*
+  [1m[36mMentor Load (7.2ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors"[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mCACHE Department Load (0.0ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+Completed 200 OK in 26ms (Views: 16.9ms | ActiveRecord: 7.9ms | Allocations: 7430)
+
+
+Started GET "/api/v1/mentors" for ::1 at 2021-09-20 14:20:40 -0500
+Processing by Api::V1::MentorsController#index as */*
+  [1m[36mMentor Load (0.5ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors"[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.3ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mCACHE Department Load (0.0ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+Completed 200 OK in 50ms (Views: 47.8ms | ActiveRecord: 1.4ms | Allocations: 7433)
+
+
+Started GET "/api/v1/mentors" for ::1 at 2021-09-20 14:21:02 -0500
+Processing by Api::V1::MentorsController#index as */*
+  [1m[36mMentor Load (0.6ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors"[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.6ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mCACHE Department Load (0.0ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+Completed 200 OK in 21ms (Views: 18.1ms | ActiveRecord: 1.5ms | Allocations: 7430)
+
+
+Started GET "/api/v1/mentors" for ::1 at 2021-09-20 14:21:11 -0500
+Processing by Api::V1::MentorsController#index as */*
+  [1m[36mMentor Load (0.5ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors"[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mCACHE Department Load (0.0ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+Completed 200 OK in 17ms (Views: 14.4ms | ActiveRecord: 1.0ms | Allocations: 7430)
+
+
+Started GET "/api/v1/mentors" for ::1 at 2021-09-20 14:22:18 -0500
+Processing by Api::V1::MentorsController#index as */*
+  [1m[36mMentor Load (0.5ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors"[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.8ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mCACHE Department Load (0.0ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+Completed 200 OK in 31ms (Views: 27.3ms | ActiveRecord: 1.9ms | Allocations: 7430)
+
+
+Started GET "/api/v1/mentors" for ::1 at 2021-09-20 14:23:12 -0500
+Processing by Api::V1::MentorsController#index as */*
+  [1m[36mMentor Load (0.6ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors"[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mCACHE Department Load (0.0ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+Completed 200 OK in 29ms (Views: 23.0ms | ActiveRecord: 1.4ms | Allocations: 7430)
+
+
+Started GET "/api/v1/mentors" for ::1 at 2021-09-20 14:23:32 -0500
+Processing by Api::V1::MentorsController#index as */*
+  [1m[36mMentor Load (0.6ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors"[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.3ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mCACHE Department Load (0.0ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+Completed 200 OK in 33ms (Views: 25.0ms | ActiveRecord: 1.5ms | Allocations: 7430)
+
+
+Started GET "/api/v1/mentors" for ::1 at 2021-09-20 14:23:40 -0500
+Processing by Api::V1::MentorsController#index as */*
+  [1m[36mMentor Load (0.5ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors"[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mCACHE Department Load (0.0ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+Completed 200 OK in 42ms (Views: 39.5ms | ActiveRecord: 1.0ms | Allocations: 7433)
+
+
+Started GET "/api/v1/mentors" for ::1 at 2021-09-20 14:24:09 -0500
+Processing by Api::V1::MentorsController#index as */*
+  [1m[36mMentor Load (0.4ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors"[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.4ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mCACHE Department Load (0.0ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+Completed 200 OK in 27ms (Views: 24.3ms | ActiveRecord: 1.3ms | Allocations: 7430)
+
+
+Started GET "/api/v1/mentors" for ::1 at 2021-09-20 14:24:24 -0500
+Processing by Api::V1::MentorsController#index as */*
+  [1m[36mMentor Load (0.4ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors"[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.3ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.3ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mCACHE Department Load (0.0ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+Completed 200 OK in 26ms (Views: 22.5ms | ActiveRecord: 1.5ms | Allocations: 7430)
+
+
+Started GET "/api/v1/mentors" for ::1 at 2021-09-20 14:24:37 -0500
+Processing by Api::V1::MentorsController#index as */*
+  [1m[36mMentor Load (0.5ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors"[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (2.5ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mCACHE Department Load (0.0ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+Completed 200 OK in 20ms (Views: 15.1ms | ActiveRecord: 3.2ms | Allocations: 7430)
+
+
+Started GET "/api/v1/mentors" for ::1 at 2021-09-20 14:25:12 -0500
+Processing by Api::V1::MentorsController#index as */*
+  [1m[36mMentor Load (0.5ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors"[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (2.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mCACHE Department Load (0.0ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+Completed 200 OK in 27ms (Views: 18.0ms | ActiveRecord: 2.9ms | Allocations: 7430)
+
+
+Started GET "/api/v1/mentors" for ::1 at 2021-09-20 14:25:27 -0500
+Processing by Api::V1::MentorsController#index as */*
+  [1m[36mMentor Load (0.5ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors"[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.3ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mCACHE Department Load (0.0ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+Completed 200 OK in 22ms (Views: 19.5ms | ActiveRecord: 1.3ms | Allocations: 7430)
+
+
+Started GET "/api/v1/mentors" for ::1 at 2021-09-20 14:26:06 -0500
+Processing by Api::V1::MentorsController#index as */*
+  [1m[36mMentor Load (0.5ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors"[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mCACHE Department Load (0.0ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+Completed 200 OK in 44ms (Views: 41.9ms | ActiveRecord: 1.2ms | Allocations: 7433)
+
+
+Started GET "/api/v1/mentors" for ::1 at 2021-09-20 14:28:26 -0500
+Processing by Api::V1::MentorsController#index as */*
+  [1m[36mMentor Load (0.6ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors"[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mCACHE Department Load (0.0ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+Completed 200 OK in 16ms (Views: 13.6ms | ActiveRecord: 0.9ms | Allocations: 7430)
+
+
+Started GET "/api/v1/mentors" for ::1 at 2021-09-20 14:28:55 -0500
+Processing by Api::V1::MentorsController#index as */*
+  [1m[36mMentor Load (0.4ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors"[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mCACHE Department Load (0.0ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+Completed 200 OK in 21ms (Views: 18.4ms | ActiveRecord: 1.0ms | Allocations: 7430)
+
+
+Started GET "/api/v1/mentors" for ::1 at 2021-09-20 14:29:03 -0500
+Processing by Api::V1::MentorsController#index as */*
+  [1m[36mMentor Load (0.4ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors"[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mCACHE Department Load (0.0ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+Completed 200 OK in 16ms (Views: 14.0ms | ActiveRecord: 0.9ms | Allocations: 7430)
+
+
+Started GET "/api/v1/mentors" for ::1 at 2021-09-20 14:30:57 -0500
+Processing by Api::V1::MentorsController#index as */*
+  [1m[36mMentor Load (0.6ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors"[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.4ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.3ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mCACHE Department Load (0.0ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+Completed 200 OK in 28ms (Views: 24.9ms | ActiveRecord: 1.6ms | Allocations: 7430)
+
+
+Started GET "/api/v1/mentors" for ::1 at 2021-09-20 15:09:54 -0500
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::MentorsController#index as */*
+  [1m[36mMentor Load (1.2ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors"[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mCACHE Department Load (0.0ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+Completed 200 OK in 60ms (Views: 56.4ms | ActiveRecord: 1.8ms | Allocations: 7470)
+
+
+Started DELETE "/api/v1/mentors/7" for ::1 at 2021-09-20 15:11:40 -0500
+Processing by Api::V1::MentorsController#destroy as */*
+  Parameters: {"id"=>"7"}
+  [1m[36mMentor Load (1.1ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors" WHERE "mentors"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:46:in `set_mentor'
+  [1m[36mCACHE Mentor Load (0.0ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors" WHERE "mentors"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:37:in `destroy'
+  [1m[35m (2.7ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:38:in `destroy'
+  [1m[36mMentor Destroy (2.4ms)[0m  [1m[31mDELETE FROM "mentors" WHERE "mentors"."id" = ?[0m  [["id", 7]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:38:in `destroy'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:38:in `destroy'
+  [1m[36mMentor Load (0.2ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors" WHERE "mentors"."department_id" = ?[0m  [["department_id", 2]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:38:in `destroy'
+  [1m[36mMentor Destroy (0.1ms)[0m  [1m[31mDELETE FROM "mentors" WHERE "mentors"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:38:in `destroy'
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:38:in `destroy'
+Completed 200 OK in 88ms (Views: 0.6ms | ActiveRecord: 6.7ms | Allocations: 10244)
+
+
+Started GET "/api/v1/mentors" for ::1 at 2021-09-20 15:11:45 -0500
+Processing by Api::V1::MentorsController#index as */*
+  [1m[36mMentor Load (0.6ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors"[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mCACHE Department Load (0.0ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+Completed 200 OK in 62ms (Views: 58.5ms | ActiveRecord: 1.2ms | Allocations: 7430)
+
+
+Started DELETE "/api/v1/mentors/3" for ::1 at 2021-09-20 15:11:59 -0500
+Processing by Api::V1::MentorsController#destroy as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mMentor Load (0.5ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors" WHERE "mentors"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:46:in `set_mentor'
+  [1m[36mCACHE Mentor Load (0.0ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors" WHERE "mentors"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:37:in `destroy'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:38:in `destroy'
+  [1m[36mMentor Destroy (0.4ms)[0m  [1m[31mDELETE FROM "mentors" WHERE "mentors"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:38:in `destroy'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:38:in `destroy'
+  [1m[36mMentor Load (0.1ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors" WHERE "mentors"."department_id" = ?[0m  [["department_id", 2]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:38:in `destroy'
+  [1m[36mMentor Destroy (0.1ms)[0m  [1m[31mDELETE FROM "mentors" WHERE "mentors"."id" = ?[0m  [["id", 7]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:38:in `destroy'
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:38:in `destroy'
+Completed 200 OK in 37ms (Views: 2.5ms | ActiveRecord: 1.6ms | Allocations: 6266)
+
+
+Started DELETE "/api/v1/mentors/3" for ::1 at 2021-09-20 15:12:03 -0500
+Started DELETE "/api/v1/mentors/3" for ::1 at 2021-09-20 15:12:03 -0500
+Processing by Api::V1::MentorsController#destroy as */*
+  Parameters: {"id"=>"3"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mMentor Load (0.1ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors" WHERE "mentors"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:46:in `set_mentor'
+Processing by Api::V1::MentorsController#destroy as */*
+  [1m[36mCACHE Mentor Load (0.0ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors" WHERE "mentors"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:37:in `destroy'
+  Parameters: {"id"=>"3"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMentor Load (0.2ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors" WHERE "mentors"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:46:in `set_mentor'
+  ↳ app/controllers/api/v1/mentors_controller.rb:38:in `destroy'
+  [1m[36mMentor Destroy (0.4ms)[0m  [1m[31mDELETE FROM "mentors" WHERE "mentors"."id" = ?[0m  [["id", 3]]
+  [1m[36mCACHE Mentor Load (0.0ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors" WHERE "mentors"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:37:in `destroy'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:38:in `destroy'
+  ↳ app/controllers/api/v1/mentors_controller.rb:38:in `destroy'
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mMentor Destroy (5198.8ms)[0m  [1m[31mDELETE FROM "mentors" WHERE "mentors"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:38:in `destroy'
+  ↳ app/controllers/api/v1/mentors_controller.rb:38:in `destroy'
+  [1m[36mMentor Load (0.1ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors" WHERE "mentors"."department_id" = ?[0m  [["department_id", 2]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:38:in `destroy'
+Started DELETE "/api/v1/mentors/3" for ::1 at 2021-09-20 15:12:08 -0500
+Completed 500 Internal Server Error in 5246ms (ActiveRecord: 5199.1ms | Allocations: 10168)
+
+
+  
+ActiveRecord::StatementInvalid (SQLite3::BusyException: database is locked):
+  
+app/controllers/api/v1/mentors_controller.rb:38:in `destroy'
+  ↳ app/controllers/api/v1/mentors_controller.rb:38:in `destroy'
+  [1m[36mMentor Destroy (0.0ms)[0m  [1m[31mDELETE FROM "mentors" WHERE "mentors"."id" = ?[0m  [["id", 7]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:38:in `destroy'
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:38:in `destroy'
+Started DELETE "/api/v1/mentors/3" for ::1 at 2021-09-20 15:12:08 -0500
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Started DELETE "/api/v1/mentors/3" for ::1 at 2021-09-20 15:12:08 -0500
+Completed 200 OK in 5309ms (Views: 0.4ms | ActiveRecord: 1.1ms | Allocations: 90688)
+
+
+Processing by Api::V1::MentorsController#destroy as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mMentor Load (0.1ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors" WHERE "mentors"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Processing by Api::V1::MentorsController#destroy as */*
+Processing by Api::V1::MentorsController#destroy as */*
+  ↳ app/controllers/api/v1/mentors_controller.rb:46:in `set_mentor'
+  Parameters: {"id"=>"3"}
+  [1m[36mCACHE Mentor Load (0.0ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors" WHERE "mentors"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Parameters: {"id"=>"3"}
+  [1m[36mMentor Load (0.0ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors" WHERE "mentors"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mMentor Load (0.1ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors" WHERE "mentors"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:37:in `destroy'
+  ↳ app/controllers/api/v1/mentors_controller.rb:46:in `set_mentor'
+  ↳ app/controllers/api/v1/mentors_controller.rb:46:in `set_mentor'
+  [1m[36mCACHE Mentor Load (0.0ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors" WHERE "mentors"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:37:in `destroy'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:38:in `destroy'
+  [1m[36mCACHE Mentor Load (0.0ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors" WHERE "mentors"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMentor Destroy (0.3ms)[0m  [1m[31mDELETE FROM "mentors" WHERE "mentors"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:37:in `destroy'
+  ↳ app/controllers/api/v1/mentors_controller.rb:38:in `destroy'
+  ↳ app/controllers/api/v1/mentors_controller.rb:38:in `destroy'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDepartment Load (1.6ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mMentor Destroy (5164.9ms)[0m  [1m[31mDELETE FROM "mentors" WHERE "mentors"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:38:in `destroy'
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:38:in `destroy'
+  ↳ app/controllers/api/v1/mentors_controller.rb:38:in `destroy'
+  [1m[36mMentor Destroy (5194.9ms)[0m  [1m[31mDELETE FROM "mentors" WHERE "mentors"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:38:in `destroy'
+  [1m[36mMentor Load (0.4ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors" WHERE "mentors"."department_id" = ?[0m  [["department_id", 2]]
+Completed 500 Internal Server Error in 10425ms (ActiveRecord: 5165.3ms | Allocations: 15185)
+
+
+  ↳ app/controllers/api/v1/mentors_controller.rb:38:in `destroy'
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:38:in `destroy'
+  ↳ app/controllers/api/v1/mentors_controller.rb:38:in `destroy'
+  
+ActiveRecord::StatementInvalid (SQLite3::BusyException: database is locked):
+  
+app/controllers/api/v1/mentors_controller.rb:38:in `destroy'
+  [1m[36mMentor Destroy (0.2ms)[0m  [1m[31mDELETE FROM "mentors" WHERE "mentors"."id" = ?[0m  [["id", 7]]
+Completed 500 Internal Server Error in 10430ms (ActiveRecord: 5195.0ms | Allocations: 17392)
+
+
+  ↳ app/controllers/api/v1/mentors_controller.rb:38:in `destroy'
+  [1m[35m (1.2ms)[0m  [1m[31mrollback transaction[0m
+  
+ActiveRecord::StatementInvalid (SQLite3::BusyException: database is locked):
+  
+app/controllers/api/v1/mentors_controller.rb:38:in `destroy'
+  ↳ app/controllers/api/v1/mentors_controller.rb:38:in `destroy'
+Completed 200 OK in 10539ms (Views: 0.4ms | ActiveRecord: 3.8ms | Allocations: 169632)
+
+
+Started DELETE "/api/v1/mentors/3" for ::1 at 2021-09-20 15:13:18 -0500
+Started DELETE "/api/v1/mentors/3" for ::1 at 2021-09-20 15:13:18 -0500
+Started DELETE "/api/v1/mentors/3" for ::1 at 2021-09-20 15:13:18 -0500
+Processing by Api::V1::MentorsController#destroy as */*
+  Parameters: {"id"=>"3"}
+Started DELETE "/api/v1/mentors/3" for ::1 at 2021-09-20 15:13:18 -0500
+Processing by Api::V1::MentorsController#destroy as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mMentor Load (0.5ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors" WHERE "mentors"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Processing by Api::V1::MentorsController#destroy as */*
+  [1m[36mMentor Load (0.2ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors" WHERE "mentors"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:46:in `set_mentor'
+  [1m[36mCACHE Mentor Load (0.0ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors" WHERE "mentors"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:37:in `destroy'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:38:in `destroy'
+  Parameters: {"id"=>"3"}
+  [1m[36mMentor Load (0.4ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors" WHERE "mentors"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:46:in `set_mentor'
+  [1m[36mMentor Destroy (0.9ms)[0m  [1m[31mDELETE FROM "mentors" WHERE "mentors"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:46:in `set_mentor'
+  ↳ app/controllers/api/v1/mentors_controller.rb:38:in `destroy'
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Mentor Load (0.0ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors" WHERE "mentors"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:37:in `destroy'
+  [1m[36mCACHE Mentor Load (0.0ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors" WHERE "mentors"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:37:in `destroy'
+  ↳ app/controllers/api/v1/mentors_controller.rb:38:in `destroy'
+  [1m[36mMentor Load (0.1ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors" WHERE "mentors"."department_id" = ?[0m  [["department_id", 2]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:38:in `destroy'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMentor Destroy (5199.6ms)[0m  [1m[31mDELETE FROM "mentors" WHERE "mentors"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:38:in `destroy'
+  ↳ app/controllers/api/v1/mentors_controller.rb:38:in `destroy'
+Started GET "/api/v1/mentors" for ::1 at 2021-09-20 15:13:28 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mMentor Destroy (5216.3ms)[0m  [1m[31mDELETE FROM "mentors" WHERE "mentors"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:38:in `destroy'
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:38:in `destroy'
+Completed 500 Internal Server Error in 10458ms (ActiveRecord: 5216.9ms | Allocations: 15083)
+
+
+  
+ActiveRecord::StatementInvalid (SQLite3::BusyException: database is locked):
+  
+app/controllers/api/v1/mentors_controller.rb:38:in `destroy'
+  ↳ app/controllers/api/v1/mentors_controller.rb:38:in `destroy'
+  [1m[36mMentor Destroy (0.1ms)[0m  [1m[31mDELETE FROM "mentors" WHERE "mentors"."id" = ?[0m  [["id", 7]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:38:in `destroy'
+  [1m[35m (0.9ms)[0m  [1m[31mrollback transaction[0m
+Processing by Api::V1::MentorsController#destroy as */*
+  ↳ app/controllers/api/v1/mentors_controller.rb:38:in `destroy'
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  Parameters: {"id"=>"3"}
+  ↳ app/controllers/api/v1/mentors_controller.rb:38:in `destroy'
+Completed 200 OK in 10523ms (Views: 0.5ms | ActiveRecord: 2.5ms | Allocations: 91445)
+
+
+Completed 500 Internal Server Error in 10515ms (ActiveRecord: 5200.5ms | Allocations: 90095)
+
+
+Processing by Api::V1::MentorsController#index as */*
+  
+ActiveRecord::StatementInvalid (SQLite3::BusyException: database is locked):
+  
+app/controllers/api/v1/mentors_controller.rb:38:in `destroy'
+  [1m[36mMentor Load (0.2ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors"[0m
+  [1m[36mMentor Load (0.2ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors" WHERE "mentors"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:46:in `set_mentor'
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE Mentor Load (0.0ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors" WHERE "mentors"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  ↳ app/controllers/api/v1/mentors_controller.rb:37:in `destroy'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:38:in `destroy'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mMentor Destroy (0.8ms)[0m  [1m[31mDELETE FROM "mentors" WHERE "mentors"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:38:in `destroy'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mCACHE Department Load (0.0ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:38:in `destroy'
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mMentor Load (0.1ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors" WHERE "mentors"."department_id" = ?[0m  [["department_id", 2]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:38:in `destroy'
+  [1m[36mMentor Destroy (0.1ms)[0m  [1m[31mDELETE FROM "mentors" WHERE "mentors"."id" = ?[0m  [["id", 7]]
+Completed 200 OK in 60ms (Views: 59.1ms | ActiveRecord: 0.7ms | Allocations: 84901)
+
+
+  ↳ app/controllers/api/v1/mentors_controller.rb:38:in `destroy'
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:38:in `destroy'
+Completed 200 OK in 69ms (Views: 0.3ms | ActiveRecord: 1.6ms | Allocations: 89352)
+
+
+Started POST "/api/v1/mentors" for ::1 at 2021-09-20 15:15:36 -0500
+Processing by Api::V1::MentorsController#create as */*
+  Parameters: {"name"=>"Danielle Ellis", "title"=>"Manager", "about"=>"Tech", "image_url"=>"https://images.unsplash.com/photo-1453728013993-6d66e9c9123a?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dmlld3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80", "department_id"=>1, "mentor"=>{"name"=>"Danielle Ellis", "title"=>"Manager", "about"=>"Tech", "image_url"=>"https://images.unsplash.com/photo-1453728013993-6d66e9c9123a?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dmlld3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80", "department_id"=>1}}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:19:in `create'
+  [1m[36mDepartment Load (0.3ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:19:in `create'
+  [1m[36mMentor Create (0.8ms)[0m  [1m[32mINSERT INTO "mentors" ("name", "title", "about", "image_url", "department_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Danielle Ellis"], ["title", "Manager"], ["about", "Tech"], ["image_url", "https://images.unsplash.com/photo-1453728013993-6d66e9c9123a?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dmlld3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80"], ["department_id", 1], ["created_at", "2021-09-20 20:15:36.728626"], ["updated_at", "2021-09-20 20:15:36.728626"]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:19:in `create'
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:19:in `create'
+Completed 202 Accepted in 23ms (Views: 0.8ms | ActiveRecord: 1.8ms | Allocations: 4287)
+
+
+Started DELETE "/api/v1/mentors/8" for ::1 at 2021-09-20 15:15:56 -0500
+Processing by Api::V1::MentorsController#destroy as */*
+  Parameters: {"id"=>"8"}
+  [1m[36mMentor Load (0.4ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors" WHERE "mentors"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:46:in `set_mentor'
+  [1m[36mCACHE Mentor Load (0.0ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors" WHERE "mentors"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:37:in `destroy'
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:38:in `destroy'
+  [1m[36mMentor Destroy (0.6ms)[0m  [1m[31mDELETE FROM "mentors" WHERE "mentors"."id" = ?[0m  [["id", 8]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:38:in `destroy'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:38:in `destroy'
+  [1m[36mMentor Load (0.0ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors" WHERE "mentors"."department_id" = ?[0m  [["department_id", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:38:in `destroy'
+  [1m[36mMentor Destroy (0.1ms)[0m  [1m[31mDELETE FROM "mentors" WHERE "mentors"."id" = ?[0m  [["id", 2]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:38:in `destroy'
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:38:in `destroy'
+Completed 200 OK in 27ms (Views: 0.8ms | ActiveRecord: 2.2ms | Allocations: 6262)
+
+
+Started GET "/api/v1/mentors" for ::1 at 2021-09-20 16:58:48 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::MentorsController#index as */*
+  [1m[36mMentor Load (0.5ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors"[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.0ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mCACHE Department Load (0.0ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mCACHE Department Load (0.0ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+Completed 200 OK in 18ms (Views: 16.1ms | ActiveRecord: 0.8ms | Allocations: 8734)
+
+
+Started DELETE "/api/v1/mentors/8" for ::1 at 2021-09-20 17:01:24 -0500
+Processing by Api::V1::MentorsController#destroy as */*
+  Parameters: {"id"=>"8"}
+  [1m[36mMentor Load (0.5ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors" WHERE "mentors"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:46:in `set_mentor'
+  [1m[36mCACHE Mentor Load (0.0ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors" WHERE "mentors"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:37:in `destroy'
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:38:in `destroy'
+  [1m[36mMentor Destroy (3.3ms)[0m  [1m[31mDELETE FROM "mentors" WHERE "mentors"."id" = ?[0m  [["id", 8]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:38:in `destroy'
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:38:in `destroy'
+  [1m[36mMentor Load (0.3ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors" WHERE "mentors"."department_id" = ?[0m  [["department_id", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:38:in `destroy'
+  [1m[36mMentor Destroy (0.2ms)[0m  [1m[31mDELETE FROM "mentors" WHERE "mentors"."id" = ?[0m  [["id", 2]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:38:in `destroy'
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:38:in `destroy'
+Completed 200 OK in 27ms (Views: 0.6ms | ActiveRecord: 5.3ms | Allocations: 6304)
+
+
+Started GET "/api/v1/mentors" for ::1 at 2021-09-20 17:19:47 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::MentorsController#index as */*
+  [1m[36mMentor Load (0.3ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors"[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mCACHE Department Load (0.0ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mCACHE Department Load (0.0ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+Completed 200 OK in 10ms (Views: 8.3ms | ActiveRecord: 0.7ms | Allocations: 8733)
+
+
+Started DELETE "/api/v1/mentors/8" for ::1 at 2021-09-20 17:19:52 -0500
+Processing by Api::V1::MentorsController#destroy as */*
+  Parameters: {"id"=>"8"}
+  [1m[36mMentor Load (0.4ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors" WHERE "mentors"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:46:in `set_mentor'
+  [1m[36mCACHE Mentor Load (0.0ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors" WHERE "mentors"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:37:in `destroy'
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:38:in `destroy'
+  [1m[36mMentor Destroy (0.8ms)[0m  [1m[31mDELETE FROM "mentors" WHERE "mentors"."id" = ?[0m  [["id", 8]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:38:in `destroy'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:38:in `destroy'
+  [1m[36mMentor Load (0.4ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors" WHERE "mentors"."department_id" = ?[0m  [["department_id", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:38:in `destroy'
+  [1m[36mMentor Destroy (0.2ms)[0m  [1m[31mDELETE FROM "mentors" WHERE "mentors"."id" = ?[0m  [["id", 2]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:38:in `destroy'
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:38:in `destroy'
+Completed 200 OK in 20ms (Views: 0.5ms | ActiveRecord: 2.6ms | Allocations: 6304)
+
+
+Started DELETE "/api/v1/mentors/3" for ::1 at 2021-09-20 17:20:25 -0500
+Processing by Api::V1::MentorsController#destroy as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mMentor Load (0.3ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors" WHERE "mentors"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:46:in `set_mentor'
+  [1m[36mCACHE Mentor Load (0.0ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors" WHERE "mentors"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:37:in `destroy'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:38:in `destroy'
+  [1m[36mMentor Destroy (0.8ms)[0m  [1m[31mDELETE FROM "mentors" WHERE "mentors"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:38:in `destroy'
+  [1m[36mDepartment Load (0.5ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:38:in `destroy'
+  [1m[36mMentor Load (0.1ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors" WHERE "mentors"."department_id" = ?[0m  [["department_id", 2]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:38:in `destroy'
+  [1m[36mMentor Destroy (0.2ms)[0m  [1m[31mDELETE FROM "mentors" WHERE "mentors"."id" = ?[0m  [["id", 7]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:38:in `destroy'
+  [1m[35m (0.8ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:38:in `destroy'
+Completed 200 OK in 23ms (Views: 0.9ms | ActiveRecord: 2.8ms | Allocations: 6267)
+
+
+Started GET "/api/v1/mentors" for ::1 at 2021-09-20 17:20:37 -0500
+Processing by Api::V1::MentorsController#index as */*
+  [1m[36mMentor Load (0.3ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors"[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mCACHE Department Load (0.0ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mCACHE Department Load (0.0ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+Completed 200 OK in 18ms (Views: 16.8ms | ActiveRecord: 1.1ms | Allocations: 8696)
+
+
+Started GET "/api/v1/mentors" for ::1 at 2021-09-20 17:22:02 -0500
+Processing by Api::V1::MentorsController#index as */*
+  [1m[36mMentor Load (0.3ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors"[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.3ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.6ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.3ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.7ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mCACHE Department Load (0.0ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mCACHE Department Load (0.0ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+Completed 200 OK in 24ms (Views: 21.8ms | ActiveRecord: 2.2ms | Allocations: 8696)
+
+
+Started GET "/api/v1/mentors" for ::1 at 2021-09-20 17:26:33 -0500
+Processing by Api::V1::MentorsController#index as */*
+  [1m[36mMentor Load (0.5ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors"[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.4ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.4ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mCACHE Department Load (0.0ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mCACHE Department Load (0.0ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+Completed 200 OK in 21ms (Views: 17.9ms | ActiveRecord: 1.7ms | Allocations: 8696)
+
+
+Started GET "/api/v1/mentors" for ::1 at 2021-09-20 17:31:49 -0500
+Processing by Api::V1::MentorsController#index as */*
+  [1m[36mMentor Load (0.3ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors"[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.7ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.3ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mCACHE Department Load (0.0ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mCACHE Department Load (0.0ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+Completed 200 OK in 28ms (Views: 25.5ms | ActiveRecord: 1.7ms | Allocations: 8696)
+
+
+Started GET "/api/v1/mentors" for ::1 at 2021-09-20 17:36:06 -0500
+Processing by Api::V1::MentorsController#index as */*
+  [1m[36mMentor Load (0.2ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors"[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mCACHE Department Load (0.0ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mCACHE Department Load (0.0ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+Completed 200 OK in 37ms (Views: 36.1ms | ActiveRecord: 0.7ms | Allocations: 8700)
+
+
+Started GET "/api/v1/mentors" for ::1 at 2021-09-20 17:36:11 -0500
+Processing by Api::V1::MentorsController#index as */*
+  [1m[36mMentor Load (0.3ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors"[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.3ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.3ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mCACHE Department Load (0.0ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mCACHE Department Load (0.0ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+Completed 200 OK in 19ms (Views: 17.7ms | ActiveRecord: 1.3ms | Allocations: 8696)
+
+
+Started GET "/api/v1/mentors" for ::1 at 2021-09-20 17:36:19 -0500
+Processing by Api::V1::MentorsController#index as */*
+  [1m[36mMentor Load (0.2ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors"[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.3ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.3ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mCACHE Department Load (0.0ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mCACHE Department Load (0.0ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+Completed 200 OK in 18ms (Views: 16.1ms | ActiveRecord: 1.2ms | Allocations: 8697)
+
+
+Started DELETE "/api/v1/mentors/8" for ::1 at 2021-09-20 17:36:27 -0500
+Processing by Api::V1::MentorsController#destroy as */*
+  Parameters: {"id"=>"8"}
+  [1m[36mMentor Load (0.4ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors" WHERE "mentors"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:46:in `set_mentor'
+  [1m[36mCACHE Mentor Load (0.0ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors" WHERE "mentors"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:37:in `destroy'
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:38:in `destroy'
+  [1m[36mMentor Destroy (1.0ms)[0m  [1m[31mDELETE FROM "mentors" WHERE "mentors"."id" = ?[0m  [["id", 8]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:38:in `destroy'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:38:in `destroy'
+  [1m[36mMentor Load (0.1ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors" WHERE "mentors"."department_id" = ?[0m  [["department_id", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:38:in `destroy'
+  [1m[36mMentor Destroy (0.2ms)[0m  [1m[31mDELETE FROM "mentors" WHERE "mentors"."id" = ?[0m  [["id", 2]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:38:in `destroy'
+  [1m[35m (1.5ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:38:in `destroy'
+Completed 200 OK in 23ms (Views: 0.7ms | ActiveRecord: 3.6ms | Allocations: 6262)
+
+
+Started GET "/api/v1/mentors" for ::1 at 2021-09-20 17:40:47 -0500
+Processing by Api::V1::MentorsController#index as */*
+  [1m[36mMentor Load (0.3ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors"[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.3ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.3ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.3ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mCACHE Department Load (0.0ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mCACHE Department Load (0.0ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+Completed 200 OK in 23ms (Views: 21.7ms | ActiveRecord: 1.5ms | Allocations: 8696)
+
+
+Started GET "/api/v1/mentors" for ::1 at 2021-09-20 17:44:15 -0500
+Processing by Api::V1::MentorsController#index as */*
+  [1m[36mMentor Load (0.3ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors"[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.3ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mCACHE Department Load (0.0ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mCACHE Department Load (0.0ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+Completed 200 OK in 26ms (Views: 24.6ms | ActiveRecord: 1.2ms | Allocations: 8699)
+
+
+Started GET "/api/v1/mentors" for ::1 at 2021-09-20 17:48:50 -0500
+Processing by Api::V1::MentorsController#index as */*
+  [1m[36mMentor Load (0.5ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors"[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mCACHE Department Load (0.0ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mCACHE Department Load (0.0ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+Completed 200 OK in 16ms (Views: 13.6ms | ActiveRecord: 1.0ms | Allocations: 8696)
+
+
+Started GET "/api/v1/mentors" for ::1 at 2021-09-20 17:53:22 -0500
+Processing by Api::V1::MentorsController#index as */*
+  [1m[36mMentor Load (0.3ms)[0m  [1m[34mSELECT "mentors".* FROM "mentors"[0m
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.3ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mCACHE Department Load (0.0ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+  [1m[36mCACHE Department Load (0.0ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/mentors_controller.rb:7:in `index'
+Completed 200 OK in 22ms (Views: 20.1ms | ActiveRecord: 1.2ms | Allocations: 8696)
+
+
